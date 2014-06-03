@@ -16,6 +16,7 @@ CREATE TABLE restaurants (
     name VARCHAR(255),
     street_address VARCHAR(255),
     zip_code INT(5),
+    phone INT(10),
     category VARCHAR(255),
     twitter_name VARCHAR(255)
 );
