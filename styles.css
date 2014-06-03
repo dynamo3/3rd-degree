@@ -1,0 +1,95 @@
+* {
+
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.mainContainer {
+
+    border: solid red 2px;
+    background-color: rgba(88, 211, 247, .8);
+    padding: 10px;
+    height: 588px;
+
+}
+
+.heading {
+    border: dashed green 2px;
+    background-color: rgba(90,174,248, .7);
+    margin: 5px;
+}
+
+.select {
+    border: dashed orange 2px;
+    background-color: rgba(182, 90, 248, .7); /*magenta*/
+    margin: 5px;
+}
+
+.category {
+    border: dashed black 2px;
+    background-color: rgba(127, 90, 248, .8); /*purple*/
+    height: 20px;
+    display: inline-block;
+    height: 30px;
+    margin: 5px;
+}
+
+#type {
+    width: 100px;
+    margin: 5px;
+
+}
+
+.user {
+    border: dashed black 2px;
+    display: inline-block;
+    float: right;
+    width: 298px;
+    height: 30px;
+    margin: 5px;
+  
+}
+
+.userName {
+    color: white;
+    border: solid black 1px;
+    padding: 2px;
+    margin: 5px;
+
+}
+
+nav {
+    display: inline-block;
+    margin: 5px;
+}
+
+.results {
+    border: dashed navy 1px;
+    margin: 5px;
+}
+.results img {
+
+    width: 60%;
+    height: 450px;
+    margin: 15px;
+    border: solid navy 2px;
+
+}
+
+table {
+    display: inline-block;
+    border: solid navy 2px;
+    position: absolute;
+    margin: 30px;
+ 
+}
+
+td, tr {
+    background-color: #eee;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+    margin: 5px;
+}
+
