@@ -1,0 +1,27 @@
+CREATE TABLE user (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(64) NOT NULL,
+    password VARCHAR(32) NOT NULL
+);
+
+CREATE TABLE search (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    zip_code INT(5) NOT NULL,
+    category VARCHAR(255),
+    user_id INT
+);
+
+CREATE TABLE restaurants (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    street_address VARCHAR(255),
+    zip_code INT(5),
+    category VARCHAR(255),
+    twitter_name VARCHAR(255)
+);
+
+CREATE TABLE tweets (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tweet_count INT,
+    twitter_name VARCHAR(255)
+);
