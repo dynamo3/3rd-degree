@@ -14,10 +14,7 @@
 
 <div class="mainContainer">
     <div class="heading">
-        <!-- <div class="select"> -->
-
-<!--             <div class="user">
-                <img src=""> -->
+        <div class="logo">Tasty Trend</div>
             <form id="logIn" action="" method=>
                 
                 <button type='button' class='logIn'>Log In</button>

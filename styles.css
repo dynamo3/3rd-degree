@@ -8,10 +8,10 @@
 
 .mainContainer {
 
-    border: solid red 2px;
+    /*border: solid red 2px;*/
     background-color: rgba(88, 211, 247, .8);
     padding: 10px;
-    height: 588px;
+    height: 625px;
 
 }
 
@@ -23,6 +23,19 @@
     /*overflow: hidden;*/
 }
 
+@font-face {
+    font-family: avocado;
+    src: url(pehuensito.ttf);
+}
+.logo {
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+    font-family: avocado;
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 1px #2D0DFF;
+}
 .select {
     border: dashed orange 2px;
     background-color: rgba(182, 90, 248, .7); /*magenta*/
@@ -61,10 +74,9 @@
     margin: 5px;
 }
 
-/*#logIn {
-    margin: 5px;
-    display: inline-block;
-}*/
+.logIn {
+    padding: 5px;
+}
 
 .logToggle {
     width: 100px;
@@ -78,6 +90,10 @@
     float: right;
     margin: 5px;
     /*clear: right;*/
+}
+
+.register {
+    padding: 5px;
 }
 
 .toggle {
