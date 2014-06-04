@@ -5,6 +5,10 @@ $(function() {
         
     });
 
+    $(".logIn").click(function(){
+        $(".logToggle").toggle("blind");
+    });
+
     // // run the currently selected effect
     // function runEffect() {
  
@@ -26,6 +30,7 @@ $(function() {
     // });
  
     $( ".toggle" ).hide();
+    $(".logToggle").hide();
 
 
 

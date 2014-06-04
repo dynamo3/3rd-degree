@@ -18,18 +18,28 @@
 
 <!--             <div class="user">
                 <img src=""> -->
-            <form action="" method=>
+            <form id="logIn" action="" method=>
                 
                 <button type='button' class='logIn'>Log In</button>
+
+                <fieldset class="logToggle">
+                    <label for='email' >Email Address*:</label>
+                    <input type='text' name='email' id='logInEmail' maxlength="50"/>
                 
+                    <label for='password' >Password*:</label>
+                    <input type='password' name='password' id='logInPassword' maxlength="50" />
+                
+                    <input type='submit' name='Submit' value='Submit' />
+                </fieldset>
+
             </form>
+
             <form id="register" action="register.php" method="POST">
                 
                 <button type='button' class='register'>Register</button>
 
                 <fieldset class="toggle">
-                <input type='hidden' name='submitted' id='submitted' value='1'/>
-                
+               
                 <label for='email' >Email Address*:</label>
                 <input type='text' name='email' id='email' maxlength="50"/>
             

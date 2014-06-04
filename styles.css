@@ -55,13 +55,37 @@
   
 }
 
+#logIn { 
+    display:inline-block;
+    float: right;
+    margin: 5px;
+}
+
+/*#logIn {
+    margin: 5px;
+    display: inline-block;
+}*/
+
+.logToggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    margin-right: 20px;
+}
 #register {
 
     display: inline-block;
     float: right;
-    margin: 10px;
+    margin: 5px;
+    /*clear: right;*/
 }
 
+.toggle {
+    width: 100px;
+    height: 150px;
+    background: #ccc;
+    margin-right: 20px;
+}
 .userName {
     color: white;
     border: solid black 1px;
@@ -107,15 +131,12 @@ td, tr {
     margin: 5px;
 }
 
-.toggler { 
+/*.toggler { 
     width: 500px; 
     height: 200px; 
-}
-  .logIn { 
-    display:inline-block;
-    float: right;
-}
-  #effect { 
+}*/
+  
+/*#effect { 
     width: 240px; 
     height: 135px; 
     padding: 0.4em; 
@@ -125,11 +146,5 @@ td, tr {
     margin: 0; 
     padding: 0.4em; 
     text-align: center; 
-}
+}*/
 
-.toggle {
-    width: 100px;
-    height: 150px;
-    background: #ccc;
-    margin-right: 20px;
-}
