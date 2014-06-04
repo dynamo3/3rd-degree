@@ -112,8 +112,8 @@ td, tr {
     height: 200px; 
 }
   .logIn { 
-    padding: .5em 1em; 
-    text-decoration: none; 
+    display:inline-block;
+    float: right;
 }
   #effect { 
     width: 240px; 

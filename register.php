@@ -1,5 +1,5 @@
 <?php
-    $con=mysqli_connect("kdfTest.com","root","","grub");
+    $con=mysqli_connect("rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com","3rddegree","rockit","3rddegree");
     // Check connection
     if (mysqli_connect_errno()) {
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
