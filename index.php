@@ -22,6 +22,36 @@
 <div class="mainContainer">
     <div class="heading">
         <!-- <div class="select"> -->
+
+<!--             <div class="user">
+                <img src=""> -->
+
+            <form id="register" action="register.php" method="POST">
+                <fieldset >
+                <legend>Register</legend>
+                <input type='hidden' name='submitted' id='submitted' value='1'/>
+                
+                <label for='email' >Email Address*:</label>
+                <input type='text' name='email' id='email' maxlength="50" />
+            
+                <label for='password' >Password*:</label>
+                <input type='password' name='password' id='password' maxlength="50" />
+                <input type='submit' name='Submit' value='Submit' />
+                 
+                </fieldset>
+<!--                 <span class="userName">Logged in as:</span>
+                <nav>
+                    <a href="#">My Account</a>
+                    <a href="#">Log Out</a>
+                </nav> -->
+            </form>
+<!--             </div> -->
+        
+        <!-- </div> -->
+    </div>
+
+    <div class="results">
+
             <div class="category">
                 
             <!-- <form action=""> -->
@@ -37,21 +67,6 @@
                 <button type="submit">GO</button>
             <!-- </form> -->
             </div>
-
-            <div class="user">
-                <img src="">
-                <span class="userName">Logged in as:</span>
-                <nav>
-                    <a href="#">My Account</a>
-                    <a href="#">Log Out</a>
-                </nav>
-            </div>
-        
-        <!-- </div> -->
-    </div>
-
-    <div class="results">
-
             <img src="tempeMap.png" alt="">
        
         <table >
