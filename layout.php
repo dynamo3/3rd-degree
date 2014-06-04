@@ -18,7 +18,7 @@
 
 <!--             <div class="user">
                 <img src=""> -->
-
+            <form action=""></form>
             <form id="register" action="register.php" method="POST">
                 
                 <button type='button' class='register'>Register</button>
