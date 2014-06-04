@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Grab Grub</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
 </head>
@@ -17,8 +20,10 @@
                 <img src=""> -->
 
             <form id="register" action="register.php" method="POST">
+                
+                <button type='button' class='register'>Register</button>
+
                 <fieldset >
-                <legend>Register</legend>
                 <input type='hidden' name='submitted' id='submitted' value='1'/>
                 
                 <label for='email' >Email Address*:</label>
