@@ -27,13 +27,13 @@
                 <input type='hidden' name='submitted' id='submitted' value='1'/>
                 
                 <label for='email' >Email Address*:</label>
-                <input type='text' name='email' id='email' maxlength="50" value="<?php echo $email ?>"/>
+                <input type='text' name='email' id='email' maxlength="50"/>
             
                 <label for='password' >Password*:</label>
-                <input type='password' name='password' id='password' maxlength="50" "<?php echo $password ?>"/>
+                <input type='password' name='password' id='password' maxlength="50" />
                 
                 <label for='confirmPassword' >Confirm Password*:</label>
-                <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" "<?php echo $confirmPassword ?>" />
+                <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" />
 
                 <input type='submit' name='Submit' value='Submit' />
                  
