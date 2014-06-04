@@ -76,6 +76,7 @@ nav {
 .results {
     border: dashed navy 1px;
     margin: 5px;
+    overflow: hidden;
 }
 
 .results img {
@@ -84,14 +85,16 @@ nav {
     height: 450px;
     margin: 15px;
     border: solid navy 2px;
+    float: left;
+    clear: left;
 }
 
 table {
     display: inline-block;
     border: solid navy 2px;
-    position: absolute;
     margin: 30px;
- 
+    float: right;
+    clear: right;
 }
 
 td, tr {
