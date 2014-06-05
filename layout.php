@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Grab Grub</title>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
 </head>
 <body>
@@ -38,7 +38,8 @@
                 
                 <label for='confirmPassword' >Confirm Password*:</label>
                 <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" />
-
+                <span id="confirmMessage" class="confirmMessage">test</span>
+                
                 <input type='submit' name='Submit' value='Submit' />
                  
                 </fieldset>
