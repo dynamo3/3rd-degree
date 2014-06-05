@@ -8,10 +8,10 @@
 
 .mainContainer {
 
-    border: solid red 2px;
+    /*border: solid red 2px;*/
     background-color: rgba(88, 211, 247, .8);
     padding: 10px;
-    height: 588px;
+    height: 625px;
 
 }
 
@@ -23,6 +23,19 @@
     /*overflow: hidden;*/
 }
 
+@font-face {
+    font-family: avocado;
+    src: url(pehuensito.ttf);
+}
+.logo {
+    float: left;
+    padding: 5px;
+    margin-left: 10px;
+    font-family: avocado;
+    font-size: 32px;
+    color: white;
+    text-shadow: 1px 1px 1px #2D0DFF;
+}
 .select {
     border: dashed orange 2px;
     background-color: rgba(182, 90, 248, .7); /*magenta*/
@@ -55,13 +68,40 @@
   
 }
 
+#logIn { 
+    display:inline-block;
+    float: right;
+    margin: 5px;
+}
+
+.logIn {
+    padding: 5px;
+}
+
+.logToggle {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    margin-right: 20px;
+}
 #register {
 
     display: inline-block;
     float: right;
-    margin: 10px;
+    margin: 5px;
+    /*clear: right;*/
 }
 
+.register {
+    padding: 5px;
+}
+
+.toggle {
+    width: 100px;
+    height: 150px;
+    background: #ccc;
+    margin-right: 20px;
+}
 .userName {
     color: white;
     border: solid black 1px;
@@ -107,15 +147,12 @@ td, tr {
     margin: 5px;
 }
 
-.toggler { 
+/*.toggler { 
     width: 500px; 
     height: 200px; 
-}
-  .logIn { 
-    display:inline-block;
-    float: right;
-}
-  #effect { 
+}*/
+  
+/*#effect { 
     width: 240px; 
     height: 135px; 
     padding: 0.4em; 
@@ -125,11 +162,5 @@ td, tr {
     margin: 0; 
     padding: 0.4em; 
     text-align: center; 
-}
+}*/
 
-.toggle {
-    width: 100px;
-    height: 150px;
-    background: #ccc;
-    margin-right: 20px;
-}
