@@ -3,37 +3,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Grab Grub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tasty Trend</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-            <form id="logIn" action="" method=>
-                
-                <button type='button' class='logIn'>Log In</button>
+        <form id="logIn" action="" method=>
+            
+            <button type='button' class='logIn'>Log In</button>
 
-                <fieldset class="logToggle">
-                    <label for='email' >Email Address*:</label>
-                    <input type='text' name='email' id='logInEmail' maxlength="50"/>
-                
-                    <label for='password' >Password*:</label>
-                    <input type='password' name='password' id='logInPassword' maxlength="50" />
-                
-                    <input type='submit' name='Submit' value='Submit' />
-                </fieldset>
+            <fieldset class="logToggle">
+                <label for='email' >Email Address*:</label>
+                <input type='text' name='email' id='logInEmail' maxlength="50"/>
+            
+                <label for='password' >Password*:</label>
+                <input type='password' name='password' id='logInPassword' maxlength="50" />
+            
+                <input type='submit' name='Submit' value='Submit' />
+            </fieldset>
 
-            </form>
+        </form>
 
-            <form id="register" action="register.php" method="POST">
-                
-                <button type='button' class='register'>Register</button>
+        <form id="register" action="register.php" method="POST">
+            
+            <button type='button' class='register'>Register</button>
 
                 <fieldset class="toggle">
                
@@ -45,20 +45,12 @@
                 
                 <label for='confirmPassword' >Confirm Password*:</label>
                 <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" />
-                <span id="confirmMessage" class="confirmMessage">test</span>
+                <span id="confirmMessage" class="confirmMessage"></span>
                 
                 <input type='submit' name='Submit' value='Submit' />
                  
                 </fieldset>
-<!--                 <span class="userName">Logged in as:</span>
-                <nav>
-                    <a href="#">My Account</a>
-                    <a href="#">Log Out</a>
-                </nav> -->
-            </form>
-<!--             </div> -->
-        
-        <!-- </div> -->
+        </form>
     </div>
 
     <div class="results">
@@ -74,7 +66,7 @@
                 <option value="Mexican">Mexican</option>
                 <option value="Thai">Thai</option>
             </select>
-            <input type="numeric" placeholder="ZIP CODE">
+            <input type="numeric" class="zip" placeholder="ZIP CODE">
             <button type="submit">GO</button>
         <!-- </form> -->
         </div>
