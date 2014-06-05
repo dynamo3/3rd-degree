@@ -150,7 +150,7 @@ nav {
     z-index: 1;
 }
 
-.results img {
+#map_div {
     width:100%;
     max-width: 800px;
     height: 450px;
