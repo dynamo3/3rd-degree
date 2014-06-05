@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tasty Trend</title>
+    <link rel="shortcut icon" href="ttlogo.png">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
