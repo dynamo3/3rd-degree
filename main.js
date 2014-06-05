@@ -33,6 +33,7 @@ $(function() {
                 pass2.style.backgroundColor = goodColor;
                 message.style.color = goodColor;
                 message.innerHTML = "Passwords Match!"
+                $('#submitReg').prop("disabled", false);
             }else{
                 //The passwords do not match.
                 //Set the color to the bad color and
@@ -40,6 +41,7 @@ $(function() {
                 pass2.style.backgroundColor = badColor;
                 message.style.color = badColor;
                 message.innerHTML = "Passwords Do Not Match!"
+                $('#submitReg').prop("disabled", true);
             }
     });
 

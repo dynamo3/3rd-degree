@@ -45,9 +45,9 @@
                 
                 <label for='confirmPassword' >Confirm Password*:</label>
                 <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" />
-                <span id="confirmMessage" class="confirmMessage"></span>
+                <div id="confirmMessage" class="confirmMessage"></div>
                 
-                <input type='submit' name='Submit' value='Submit' />
+                <input type='submit' id="submitReg" name='Submit' value='Submit' disabled/>
                  
                 </fieldset>
         </form>
