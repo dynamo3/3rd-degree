@@ -61,8 +61,8 @@
 
         <div class="category">
             
-        <!-- <form action=""> -->
-            <select name="restaurants" id="type">
+        <form action="model.php" method="GET"></form>
+            <select name="category" id="category">
                 <option value="All">All</option>
                 <option value="American">American</option>
                 <option value="Greek">Greek</option>
@@ -70,9 +70,10 @@
                 <option value="Mexican">Mexican</option>
                 <option value="Thai">Thai</option>
             </select>
+
             <input type="numeric" class="zip" placeholder="ZIP CODE">
-            <button type="submit">GO</button>
-        <!-- </form> -->
+            <button type="submit" class="go">GO</button>
+        </form>
         </div>
 
         <div id="map_div"></div>
