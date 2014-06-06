@@ -46,9 +46,24 @@ $(function() {
     });
 //___________table data populate begin___________________________
     
+
     $('.go').click(function(){
 
-        console.log("hello");
+       var userParam = {
+            category: $("#category").val(),
+            zip_code: $(".zip").val()
+       };
+
+        $.ajax({
+            url: "search.php",
+            data: userParam,
+            cache: false,
+            dataType: 'json',
+            type: 'POST',
+            success: function(){
+                console.log ("success")
+            }
+        });
 
     });
 
