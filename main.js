@@ -60,8 +60,8 @@ $(function() {
             cache: false,
             dataType: 'json',
             type: 'POST',
-            success: function(){
-                console.log ("success")
+            success: function(data){
+                console.log (data)
             }
         });
 
