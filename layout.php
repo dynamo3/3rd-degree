@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <title>Tasty Trend</title>
     <link rel="shortcut icon" href="ttlogo.png">
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
     <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
     <script src="main.js"></script>
     <script src="map.js"></script>
+    <script src="data.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -85,19 +85,21 @@
                 <th>Tweet Count</th>
                 <th>Rating</th>
             </tr>
-            <script id="searchResults" type="text/x-handlebars-template">
-            {{#each this}}
-            <tr>
-                <td>Carolinas</td>
-                <td>354</td>
-                <td>4.5</td>
-            </tr>
-            {{/each}}
-            </script>
         </table>
     </div>
     
 </div>
+
+<script id="searchResults" type="text/x-handlebars-template">
+
+<tr>
+    <td>{{name}}</td>
+    <td>{{tweet_count}}</td>
+    <td>rating</td>
+</tr>
+
+</script>
     
 </body>
+<script type="text/javascript" src="handlebars-v1.3.0.js"></script>
 </html>

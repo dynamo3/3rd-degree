@@ -1,7 +1,7 @@
 $(function(){
 
     var data = {
-        restResults:[
+         restResults:[
             {
                 "name":"Thirsty Lion", 
                 "address":"2000 E Rio Salado Rd Pkwy #1041",
@@ -10,7 +10,6 @@ $(function(){
                 "category":"American",
                 "twitter_name":"@thirstylion"
             },
-
             {
                 "name":"Green New American Vegitarian", 
                 "address":"2240 N Scottsdale Rd",
@@ -19,7 +18,6 @@ $(function(){
                 "category":"American",
                 "twitter_name":"@greendamon"
             },
-
             {
                 "name":"Four Peaks Brew", 
                 "address":"1340 E 8th St #104",
@@ -43,9 +41,18 @@ $(function(){
                 "tweet_count":"40",
                 "twitter_name":"@fourpeaksbrew"
             }
+
         ]
 
 
     };
+
+    var template = Handlebars.compile( $('#searchResults').html() );
+    
+    for (i in data.restResults) {
+        //data.restResults[i]
+        $('table').append( template(data.restResults[i]) );
+    }
+
     
 });
