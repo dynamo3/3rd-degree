@@ -7,7 +7,7 @@ include('db.php');
 $db = new DB();
 
 // Write SQL Statement
-$sql = "SELECT * FROM restaurants WHERE zip_code = '' AND category = ''";
+$sql = "SELECT * FROM restaurants WHERE zip_code = '85281' AND category = 'Italian'";
 
 // Execute SQL Statement
 $results = $db->execute($sql);

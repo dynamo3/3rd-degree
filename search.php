@@ -6,17 +6,16 @@ include('db.php');
 // Start Database Object
 $db = new DB();
 
-$zip = $('.zip').val();
-$
+
 
 // Write SQL Statement
-$sql = "SELECT * FROM restaurants WHERE zip_code = '$(".zip").val' AND category = ''";
+$sql = "SELECT * FROM restaurants WHERE zip_code = '85281' AND category = 'Italian'";
 
 // Execute SQL Statement
 $results = $db->execute($sql);
 
 
-// print_r($_REQUEST);
+print_r($_REQUEST);
 
 // $response = [
     
@@ -33,16 +32,13 @@ $results = $db->execute($sql);
 // ];
 
 $response = [
-    "results"=> [
-    ]
+    "results"=> []
 ];
 
 
-while ($row = $db->fetch_assoc()) {
-    $response['results'][] = $row;
+while ($row = $results->fetch_assoc()) {
+    // $response['results'][] = $row;
 }
-
-
 
 
 echo json_encode($response);
