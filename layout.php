@@ -85,31 +85,15 @@
                 <th>Tweet Count</th>
                 <th>Rating</th>
             </tr>
+            <script id="searchResults" type="text/x-handlebars-template">
+            {{#each this}}
             <tr>
-                <td>Carolina's</td>
+                <td>Carolinas</td>
                 <td>354</td>
                 <td>4.5</td>
             </tr>
-            <tr>
-                <td>Manuel's</td>
-                <td>563</td>
-                <td>4.0</td>
-            </tr>
-            <tr>
-                <td>Arriba's</td>
-                <td>235</td>
-                <td>3.5</td>
-            </tr>
-            <tr>
-                <td>La Parrilla Suiza</td>
-                <td>214</td>
-                <td>3.3</td>
-            </tr>
-            <tr>
-                <td>Rosita's</td>
-                <td>897</td>
-                <td>5.0</td>
-            </tr>
+            {{/each}}
+            </script>
         </table>
     </div>
     
