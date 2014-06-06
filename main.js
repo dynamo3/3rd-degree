@@ -48,7 +48,7 @@ $(function() {
     
     $('.go').click(function(){
 
-        return 
+        console.log("hello");
 
     });
 
