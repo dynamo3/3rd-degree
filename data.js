@@ -4,7 +4,7 @@ $(function(){
          restResults:[
             {
                 "name":"Thirsty Lion", 
-                "address":"2000 E Rio Salado Rd Pkwy #1041",
+                "street_address":"2000 E Rio Salado Rd Pkwy #1041",
                 "zip_code":"85281",
                 "phone":"4809682920",
                 "category":"American",
@@ -12,7 +12,7 @@ $(function(){
             },
             {
                 "name":"Green New American Vegitarian", 
-                "address":"2240 N Scottsdale Rd",
+                "street_address":"2240 N Scottsdale Rd",
                 "zip_code":"85281",
                 "phone":"4809419003",
                 "category":"American",
@@ -20,7 +20,7 @@ $(function(){
             },
             {
                 "name":"Four Peaks Brew", 
-                "address":"1340 E 8th St #104",
+                "street_address":"1340 E 8th St #104",
                 "zip_code":"85281",
                 "phone":"4803039967",
                 "category":"American",
@@ -50,8 +50,16 @@ $(function(){
     var template = Handlebars.compile( $('#searchResults').html() );
     
     for (i in data.restResults) {
-        //data.restResults[i]
-        $('table').append( template(data.restResults[i]) );
+            $('table').append(template({name:data.restResults[i], count:data.tweetResults[i]}));
+            
+            
+            
+        
+        // for (i in data.tweetResults) {
+        //     $('table').append(template(data.tweetResults[i]));
+        //     for (i in data.)
+
+        // }
     }
 
     

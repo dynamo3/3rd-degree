@@ -86,12 +86,11 @@
 <script id="searchResults" type="text/x-handlebars-template">
 
 <tr>
-    <td>{{name}}</td>
-    <td>{{tweet_count}}</td>
-    <td>rating</td>
+    <td>{{name.name}}</td>
+    <td>{{count.tweet_count}}</td>
 </tr>
-
 </script>
+
     
 </body>
 
