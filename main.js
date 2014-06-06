@@ -44,7 +44,22 @@ $(function() {
                 $('#submitReg').prop("disabled", true);
             }
     });
+//___________table data populate begin___________________________
+    
+    $('.go').click(function(){
 
+        return 
+
+    });
 
 
 });
+
+
+
+
+
+
+
+
+
