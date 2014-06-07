@@ -37,7 +37,7 @@ $response = [
 
 
 while ($row = $results->fetch_assoc()) {
-    // $response['results'][] = $row;
+    $response['results'][] = $row;
 }
 
 

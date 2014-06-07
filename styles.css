@@ -152,7 +152,7 @@ nav {
 
 #map_div {
     width:100%;
-    max-width: 800px;
+    max-width: 650px;
     height: 450px;
     margin: 15px;
     border: solid navy 2px;
@@ -175,7 +175,7 @@ th{
 td, tr {
     background-color: #eee;
     margin: 10px;
-    width: 30%;
+    width: 40%;
     text-align: center;
     margin: 5px;
 }
