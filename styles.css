@@ -180,5 +180,7 @@ td, tr {
     margin: 5px;
 }
 
-
+.pac-icon{
+    background-image: none;
+}
 

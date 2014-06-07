@@ -13,6 +13,14 @@ $(function() {
   };
   // Calling the constructor, thereby initializing the map
   var map = new google.maps.Map(document.getElementById('map_div'), options);
+  
+  // Autocomplete - brings in library of search results as person types in input box.
+  var acOptions = {
+    types: ['geocode']
+  };
+    
+  var autocomplete = new google.maps.places.Autocomplete(document.getElementById('autocomplete'),acOptions);
+  autocomplete.bindTo('bounds',map);
 
   // Define Marker properties
   var image1 = new google.maps.MarkerImage('letter_a.png',
@@ -49,12 +57,14 @@ $(function() {
       icon: image2 // This path is the custom pin to be shown. Remove this line and the proceeding comma to use default pin
   });
 
+
+
   // // Add listener for a click on the pin
   // google.maps.event.addListener(marker1, 'click', function() {
   //     infowindow1.open(map, marker1);
   // });
 
-  // // Add information window
+  // // Add information window with custom content
   // var infowindow1 = new google.maps.InfoWindow({
   //      content:  createInfo('Evoluted New Media', 'Ground Floor,
   // 35 Lambert Street,
@@ -64,61 +74,54 @@ $(function() {
   // <a title="Click to view our website" href="http://www.evoluted.net">Our Website</a>')
   //     });
 
-    // // Create information window
-    // function createInfo(title, content) {
-    //     return '<div class="infowindow"><strong>'+ title +'</strong>'+content+'</div>';
-    // };
+  //   // Create information window
+  //   function createInfo(title, content) {
+  //       return '<div class="infowindow"><strong>'+ title +'</strong>'+content+'</div>';
+  //   };
+
+  //Add information window with premade content from googlemaps library
+  var infoWindow = new google.maps.InfoWindow();
+
+  google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    infoWindow.close();
+    var place = autocomplete.getPlace();
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
+    } else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);
+    }
+    // marker1.setPosition(place.geometry.location);
+    // infoWindow.setContent('<div><strong>' + place.name + '</strong><br>');
+    // infoWindow.open(map, marker1);
+    // google.maps.event.addListener(marker,'click',function(e){
+
+    //   infoWindow.open(map, marker);
+
+    // });
+  });
 
 
-// ---------Geocode to turn zip into Lat/Long -------------------
+// // ---------Geocode to turn zip into Lat/Long -------------------
 
-  //Geocode function for the origin location
-  function GoogleGeocode() {
-    geocoder = new google.maps.Geocoder();
-    this.geocode = function(address, callbackFunction) {
-      geocoder.geocode( { 'address': address}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          var result = {};
-          result.latitude = results[0].geometry.location.lat();
-          result.longitude = results[0].geometry.location.lng();
-          callbackFunction(result);
-        } else {
-          alert("Geocode was not successful for the following reason: " + status);
-          callbackFunction(null);
-        }
-      });
-    };
-  };
-
-// //Process form input
-//   $('.category button').on('click', function(e){
-//     // //Stop the form submission
-//     // e.preventDefault();
-//     //Get the user input and use it
-//     var userinput = $('.zip').val();
-
-//     if (userinput == "")
-//       {
-//         alert("The input box was blank.");
-//       }
-     
-//       var g = new GoogleGeocode();
-//       var address = userinput;
-
-//       g.geocode(address, function(data) {
-//         if(data != null) {
-//           olat = data.latitude;
-//           olng = data.longitude;
-         
-//           $('.logo').append("Latitude: " + olat + "<br />" + "Longitude: " + olng + "<br /><br />");
-
+//   //Geocode function for the origin location
+//   function GoogleGeocode() {
+//     geocoder = new google.maps.Geocoder();
+//     this.geocode = function(address, callbackFunction) {
+//       geocoder.geocode( { 'address': address}, function(results, status) {
+//         if (status == google.maps.GeocoderStatus.OK) {
+//           var result = {};
+//           result.latitude = results[0].geometry.location.lat();
+//           result.longitude = results[0].geometry.location.lng();
+//           callbackFunction(result);
 //         } else {
-//           //Unable to geocode
-//           alert('ERROR! Unable to geocode address');
+//           alert("Geocode was not successful for the following reason: " + status);
+//           callbackFunction(null);
 //         }
 //       });
+//     };
+//   };
 
-//   });
 });
 
 

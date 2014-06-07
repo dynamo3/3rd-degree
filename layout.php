@@ -64,7 +64,7 @@
                 <option value="Thai">Thai</option>
             </select>
 
-            <input type="numeric" class="zip" placeholder="ZIP CODE">
+            <input type="numeric" class="zip" id="autocomplete" placeholder="ZIP CODE or CITY">
             <button type="submit" class="go">GO</button>
         </form>
         </div>
@@ -97,7 +97,7 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 <script src="main.js"></script>
 <script src="map.js"></script>
 <script src="data.js"></script>
