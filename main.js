@@ -61,12 +61,14 @@ $(function() {
             dataType: 'json',
             type: 'POST',
             success: function(data){
-                console.log (data)
+                var template = Handlebars.compile( $('#searchResults').html() );
+                for (i in data.results) {
+                    $('table').append(template({name:data.results[i]}));
+                }
             }
+
         });
-
     });
-
 
 });
 
