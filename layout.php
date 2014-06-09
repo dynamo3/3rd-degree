@@ -5,13 +5,6 @@
     <meta charset="UTF-8">
     <title>Tasty Trend</title>
     <link rel="shortcut icon" href="ttlogo.png">
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true" type="text/javascript"></script>
-    <script src="main.js"></script>
-    <script src="map.js"></script>
-    <script src="data.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -100,7 +93,6 @@
 
     
 </body>
-<<<<<<< HEAD
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
@@ -109,8 +101,7 @@
 <script src="main.js"></script>
 <script src="map.js"></script>
 <script src="data.js"></script>
-=======
->>>>>>> fbccdeb83f2bc1129abb3b11f3dfa1e0d85efb8c
 <script type="text/javascript" src="handlebars-v1.3.0.js"></script>
+
 </html>
 
