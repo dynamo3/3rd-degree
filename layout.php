@@ -100,7 +100,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 <script src="main.js"></script>
 <script src="map.js"></script>
-<script src="data.js"></script>
 <script type="text/javascript" src="handlebars-v1.3.0.js"></script>
 
 </html>

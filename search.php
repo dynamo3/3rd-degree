@@ -9,27 +9,15 @@ $db = new DB();
 
 
 // Write SQL Statement
-$sql = "SELECT * FROM restaurants WHERE zip_code = '85281' AND category = 'Italian'";
+$sql = "SELECT * FROM restaurants WHERE zip_code=\"{$_POST['zip_code']}\" AND category=\"{$_POST['category']}\"";
 
 // Execute SQL Statement
 $results = $db->execute($sql);
 
 
-print_r($_REQUEST);
+// print_r($_REQUEST);
 
-// $response = [
-    
-//     "results"=> [
-        
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//         ['name'=> 'Thirsty Lion','street_address'=> '234 main st'],
-//     ]
-// ];
+// search through the database and pull the matching results
 
 $response = [
     "results"=> []
