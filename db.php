@@ -42,20 +42,4 @@ class DB {
 
     }
 
-    /**
-     * INSERT
-     */
-    // public function insert($table_name, $sql_values) {
-
-    //     // Prepare values for SQL
-    //     foreach ($sql_values as $field => $value) {
-    //         $sql_values[$field] = "'" . trim($value) . "'";
-    //     }
-
-    //     // Create INSERT statement
-    //     $sql =  "INSERT INTO `{$table_name}` (`" . implode('`, `', array_keys($sql_values)) . "`) VALUES (" . implode(', ', $sql_values) . ")";
-    //     return $this->execute($sql);
-
-    // }
-
 }
