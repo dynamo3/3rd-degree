@@ -12,7 +12,7 @@
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-        <form id="logIn" action="" method=>
+        <form id="logIn" action="login.php" method="POST">
             
             <button type='button' class='logIn'>Log In</button>
 

@@ -39,10 +39,10 @@ while ($row = $results->fetch_assoc()) {
     $sql="SELECT FROM user (email, password)
     VALUES ('$email', '$password')";
 
-    if (!mysqli_query($con,$sql)) {
-      die('Error: ' . mysqli_error($con));
-    }
-    echo "1 record added";
+    // if (!mysqli_query($con,$sql)) {
+    //   die('Error: ' . mysqli_error($con));
+    // }
+    // echo "1 record added";
 
-    mysqli_close($con);
-    ?>
+    // mysqli_close($con);
+?>
