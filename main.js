@@ -63,11 +63,14 @@ $(function() {
             success: function(data){
                 var template = Handlebars.compile( $('#searchResults').html() );
                 for (i in data.results) {
-                    $('table').append(template(data.results[i]));
+                    $('tbody').append(template(data.results[i]));
                 }
             }
 
         });
+
+        $('tbody').html('');
+
     });
 
 });

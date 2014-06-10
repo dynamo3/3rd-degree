@@ -72,12 +72,17 @@
         <div id="map_div"></div>
 
        
-        <table >
-            <tr>
-                <th>Restaurant</th>
-                <th>Tweet Count</th>
-                <th>Rating</th>
-            </tr>
+        <table>
+            <thead>    
+                <tr>
+                    <th>Restaurant</th>
+                    <th>Tweet Count</th>
+                    <th>Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
         </table>
     </div>
     

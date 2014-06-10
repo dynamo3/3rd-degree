@@ -10,8 +10,7 @@ $db = new DB();
 
 if($_POST['category']=="All") {
     $cat="%";
-
-    } else {
+} else {
         $cat = $_POST['category'];
     }
 
@@ -26,9 +25,6 @@ $sql = "SELECT * FROM
 // Execute SQL Statement
 $results = $db->execute($sql);
 
-
-// print_r($_REQUEST);
-
 // search through the database and pull the matching results
 
 $response = [
@@ -42,5 +38,7 @@ while ($row = $results->fetch_assoc()) {
 
 
 echo json_encode($response);
+
+
 
 ?>
