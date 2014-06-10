@@ -5,39 +5,49 @@ include('db.php');
 // Start Database Object
 $db = new DB();
 
+// nobody is logged in yet
+$userLoggedIn = false;
 
-$email = $_POST['email'];
-$password = $_POST['password'];
+// check for valid email address before searching database.
 
-//  check for valid email address before searching database.
-// re = /^(.)+(\@)+(.)+(\.)+(.{1,64})$/;
-// if $email !
+$reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
 
-// Write SQL Statement
-$sql = "SELECT * FROM user WHERE email=\"{$_POST['email']}\"";
+if (preg_match($reg, $_POST['email']) === 1) {
 
-// Execute SQL Statement
-$results = $db->execute($sql);
+    // echo ' valid email address <br>';
 
-// print_r($results);
+    // Write SQL Statement
+    $sql = "SELECT * FROM user WHERE email=\"{$_POST['email']}\"";
 
-// check for a matching entry for a registered user
-if ($results->num_rows != 0) {
-    // make a $row variable for results
-    $row = $results->fetch_assoc();
+    // Execute SQL Statement
+    $results = $db->execute($sql);
 
-    // echo $row['id'] . ' | ' .
-    //      $row['email'] . ' | ' .
-    //      $row['password'] . '<br>';
+    // print_r($results);
 
-    if ($password == $row['password']) {
-        echo $row['email'] . ' successfully logged in. <br>';
+    // check for a matching entry for a registered user
+    if ($results->num_rows != 0) {
+
+        // make a $row variable for results
+        $row = $results->fetch_assoc();
+        // echo $row['id'] . ' | ' .
+        //      $row['email'] . ' | ' .
+        //      $row['password'] . '<br>';
+
+        if ($_POST['password'] == $row['password']) {
+            echo $row['email'] . ' successfully logged in. <br>';
+            $userLoggedIn = true;
+
+        } else {
+            echo $row['email'] . ' password did not match. <br>';
+
+        }
     } else {
-        echo $row['email'] . ' password did not match. <br>';
+        echo $_POST['email'] . ' is an unknown user, please register. <br>';
+
     }
 } else {
-    echo $_POST['email'] . ' is an unknown user, please register. <br>';
-}
+    echo ' Invalid email address was entered. <br>';
 
+}
 
 ?>
