@@ -86,9 +86,9 @@
 <script id="searchResults" type="text/x-handlebars-template">
 
 <tr>
-    <td>{{name.name}}</td>
-    <td>{{name.tweet_count}}</td>
-    <td>{{rating.rating}}</td>
+    <td>{{name}}</td>
+    <td>{{tweet_count}}</td>
+    <td>{{rating}}</td>
 </tr>
 </script>
 
