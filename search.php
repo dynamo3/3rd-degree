@@ -6,19 +6,20 @@ include('db.php');
 // Start Database Object
 $db = new DB();
 
-if($_POST['category']=='All') {
-    $cat = "%";
-} else {
-    $cat = $_POST['category'];
-}
+if($_POST['category']=="All") {
+    $cat="%";
+
+    } else {
+        $cat = $_POST['category'];
+    }
 
 // Write SQL Statement
 $sql = "SELECT * FROM 
-    restaurants as r, tweets as t, rating as ra 
-    WHERE r.zip_code=\"{$_POST['zip_code']}\" 
-    AND r.category like \"$cat\" 
-    AND r.twitter_name=t.twitter_name 
-    AND r.id=ra.restaurant_id";
+            restaurants as r, tweets as t, rating as ra 
+            WHERE r.twitter_name=t.twitter_name
+            AND r.id=ra.restaurant_id
+            AND r.zip_code=\"{$_POST['zip_code']}\" 
+            AND r.category LIKE \"$cat\"";
 
 // Execute SQL Statement
 $results = $db->execute($sql);
