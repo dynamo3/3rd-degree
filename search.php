@@ -9,7 +9,17 @@ $db = new DB();
 
 
 // Write SQL Statement
-$sql = "SELECT * FROM restaurants as r, tweets as t, rating as ra WHERE r.zip_code=\"{$_POST['zip_code']}\" AND r.category=\"{$_POST['category']}\" AND r.twitter_name=t.twitter_name AND r.id=restaurant_id";
+$sql = "SELECT * FROM 
+            restaurants as r, tweets as t, rating as ra 
+            WHERE r.twitter_name=t.twitter_name
+            AND r.id=restaurant_id
+            AND r.zip_code=\"{$_POST['zip_code']}\" 
+            AND r.category=\"{$_POST['category']}\"";
+
+// $sqlA = "SELECT * FROM 
+//             restaurants as r, tweets as t, rating as ra 
+//             WHERE "
+
 // Execute SQL Statement
 $results = $db->execute($sql);
 
