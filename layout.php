@@ -87,7 +87,7 @@
 
 <tr>
     <td>{{name.name}}</td>
-    <td>{{count.tweet_count}}</td>
+    <td>{{name.tweet_count}}</td>
     <td>{{rating.rating}}</td>
 </tr>
 </script>
