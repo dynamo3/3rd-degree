@@ -6,6 +6,8 @@ include('db.php');
 // Start Database Object
 $db = new DB();
 
+//If statement to include "All" as a search category using variable "$cat". "%" is wild card.
+
 if($_POST['category']=="All") {
     $cat="%";
 
