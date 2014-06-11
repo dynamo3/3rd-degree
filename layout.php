@@ -8,46 +8,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-        <form id="logIn" action="login.php" method="POST">
-            
-            <button type='button' class='logIn'>Log In</button>
+        <div class="err"> 
+            <?php 
+                if($loginStatus==){
+                    echo "congrats";
+                } else {
+                    include ('buttons.php');
+                }
+                // echo $logInStatus . '<br>'; echo $registerStatus;
 
-            <fieldset class="logToggle">
-                <label for='email' >Email Address*:</label>
-                <input type='text' name='email' id='logInEmail' maxlength="50"/>
-            
-                <label for='password' >Password*:</label>
-                <input type='password' name='password' id='logInPassword' maxlength="50" />
-            
-                <input type='submit' name='Submit' value='Submit' />
-            </fieldset>
-
-        </form>
-
-        <form id="register" action="register.php" method="POST">
-            
-            <button type='button' class='register'>Register</button>
-
-                <fieldset class="toggle">
-               
-                <label for='email' >Email Address*:</label>
-                <input type='text' name='email' id='email' maxlength="50"/>
-            
-                <label for='password' >Password*:</label>
-                <input type='password' name='password' id='password' maxlength="50" />
-                
-                <label for='confirmPassword' >Confirm Password*:</label>
-                <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" />
-                <div id="confirmMessage" class="confirmMessage"></div>
-                
-                <input type='submit' id="submitReg" name='Submit' value='Submit' disabled/>
-                 
-                </fieldset>
-        </form>
+            ?> 
+        </div>
+        
     </div>
 
     <div class="results">

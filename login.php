@@ -2,52 +2,54 @@
 // Include Database Class
 include('db.php');
 
-// Start Database Object
-$db = new DB();
+function logIn(){
 
-// nobody is logged in yet
-$userLoggedIn = false;
+    // Start Database Object
+    $db = new DB();
 
-// check for valid email address before searching database.
+    // nobody is logged in yet
+    $userLoggedIn = false;
 
-$reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
+    // check for valid email address before searching database.
 
-if (preg_match($reg, $_POST['email']) === 1) {
+    $reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
 
-    // echo ' valid email address <br>';
+    if (preg_match($reg, $_POST['email']) === 1) {
 
-    // Write SQL Statement
-    $sql = "SELECT * FROM user WHERE email=\"{$_POST['email']}\"";
+        // echo ' valid email address <br>';
 
-    // Execute SQL Statement
-    $results = $db->execute($sql);
+        // Write SQL Statement
+        $sql = "SELECT * FROM user WHERE email=\"{$_POST['email']}\"";
 
-    // print_r($results);
+        // Execute SQL Statement
+        $results = $db->execute($sql);
 
-    // check for a matching entry for a registered user
-    if ($results->num_rows != 0) {
+        // print_r($results);
 
-        // make a $row variable for results
-        $row = $results->fetch_assoc();
-        // echo $row['id'] . ' | ' .
-        //      $row['email'] . ' | ' .
-        //      $row['password'] . '<br>';
+        // check for a matching entry for a registered user
+        if ($results->num_rows != 0) {
 
-        if ($_POST['password'] == $row['password']) {
-            echo $row['email'] . ' successfully logged in. <br>';
-            $userLoggedIn = true;
+            // make a $row variable for results
+            $row = $results->fetch_assoc();
+            // echo $row['id'] . ' | ' .
+            //      $row['email'] . ' | ' .
+            //      $row['password'] . '<br>';
 
+            if ($_POST['password'] == $row['password']) {
+                return $row['email'] . ' successfully logged in. <br>';
+                $userLoggedIn = true;
+
+            } else {
+                return $row['email'] . ' password did not match. <br>';
+
+            }
         } else {
-            echo $row['email'] . ' password did not match. <br>';
+            return $_POST['email'] . ' is an unknown user, please register. <br>';
 
         }
     } else {
-        echo $_POST['email'] . ' is an unknown user, please register. <br>';
+        return ' Invalid email address was entered. <br>';
 
     }
-} else {
-    echo ' Invalid email address was entered. <br>';
-
 }
-
 ?>

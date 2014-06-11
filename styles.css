@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.err {
+    color: red;
+    font-weight: bold; 
+}
 
 .mainContainer {
     /*border: solid red 2px;*/
