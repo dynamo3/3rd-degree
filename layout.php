@@ -13,11 +13,11 @@
         <div class="logo">Tasty Trend</div>
         <div class="err"> 
             <?php 
-                if($loginStatus==){
-                    echo "congrats";
-                } else {
+                // if($loginStatus==){
+                //     echo "congrats";
+                // } else {
                     include ('buttons.php');
-                }
+                // }
                 // echo $logInStatus . '<br>'; echo $registerStatus;
 
             ?> 
