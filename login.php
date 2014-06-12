@@ -2,6 +2,8 @@
 // Include Database Class
 include('db.php');
 
+include('initialize.php');
+
 function logIn(){
 
     // Start Database Object
@@ -36,8 +38,9 @@ function logIn(){
             //      $row['password'] . '<br>';
 
             if ($_POST['password'] == $row['password']) {
-                return $row['email'] . ' successfully logged in. <br>';
-                $userLoggedIn = true;
+                $_SESSION['id'] = $row['id'];
+                
+                // return $row['email'] . ' successfully logged in. <br>';
 
             } else {
                 return $row['email'] . ' password did not match. <br>';

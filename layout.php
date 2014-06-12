@@ -11,13 +11,17 @@
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-        <div class="err"> 
+        <div class="buttons"> 
             <?php 
-                // if($loginStatus==){
-                //     echo "congrats";
-                // } else {
-                    include ('buttons.php');
-                // }
+                include ('initialize.php');
+                include ('buttons.php');
+                if(!is_numeric($_SESSION['id'])) {
+                    // include ('buttons.php');
+
+                } else {
+                    include('logout.php');
+                    echo "congrats";
+                }
                 // echo $logInStatus . '<br>'; echo $registerStatus;
 
             ?> 

@@ -1,10 +1,10 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-</head>
-<body>
+</head> -->
+<!-- <body> -->
     <form id="logIn" action="index.php" method="POST">
             
         <button type='button' class='logIn'>Log In</button>
@@ -46,6 +46,6 @@
             </fieldset>
     </form>
 
-    
+  <!--   
 </body>
-</html>
+</html> -->

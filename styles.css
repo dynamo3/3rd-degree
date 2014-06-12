@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+/*.buttons {
+    border: 2px solid navy;
+    display: inline;
+    float: right;
+    width: 200px;
+    position: relative;
+}*/
+
 .err {
     color: red;
     font-weight: bold; 

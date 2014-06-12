@@ -2,17 +2,19 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
     
-    $logInStatus = '';
-    $registerStatus = '';
+    // $logInStatus = '';
+    // $registerStatus = '';
 
     if($_POST){
         if ($_POST['action']=='login') {
             include ('login.php');
-            $logInStatus = logIn();
+            logIn();
+
+            print_r('Welcome,' . ' ' . $_POST['email']);
 
         } else if($_POST['action']=='register'){
             include ('register.php');
-            $registerStatus = register();
+            // $registerStatus = register();
 
         }
     }
