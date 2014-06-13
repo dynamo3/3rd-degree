@@ -132,15 +132,19 @@ button {
     position: absolute;
     right: 10px;
 }
-.logOutBox {
-    display: inline-block;
-    position: relative;
-}
+
 .logOut {
     height: 30px;
     width:65px;
     position: absolute;
     right: 80px;
+}
+
+.welcome {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
 }
 
 .toggle {
@@ -205,7 +209,7 @@ td, tr {
 
 .pac-icon{
     background-image: none;
-    
+
 }
 
 

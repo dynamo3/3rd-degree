@@ -1,25 +1,30 @@
 <?php
+
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
     
     include('initialize.php');
-    // $logInStatus = '';
-    // $registerStatus = '';
+
+    $userName = '';
 
     if($_POST){
-        if ($_POST['action']=='login') {
-            include ('login.php');
-            logIn();
+        
+        if (!is_numeric($_SESSION['id'])) {
+            //A user is NOT logged in
 
-            // print_r('Welcome,' . ' ' . $_POST['email']);
+            if ($_POST['action']=='login') {
+                include ('login.php');
 
-            // $()
+                $userName = logIn();
 
-        } else if($_POST['action']=='register'){
-            include ('register.php');
-            // $registerStatus = register();
-
-        }
+            } else if($_POST['action']=='register'){
+                include ('register.php');
+                // $registerStatus = register();
+            }
+        }else if($_POST['action']=='logOut'){
+            // A user IS logged in
+            $_SESSION['id'] = 'false';
+            }
     }
 
     require 'layout.php';

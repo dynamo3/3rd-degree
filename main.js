@@ -9,14 +9,14 @@ $(function() {
         $(".logToggle").toggle("blind");
     });
 
-    $(".logOut").click(function(){
-        
+    // $(".logOut").click(function(){
+    //     $('.logOutToggle').toggle('blind');
 
-    });
+    // });
 
     $( ".toggle" ).hide();
     $(".logToggle").hide();
-    $(".logOutToggle").hide();
+    // $(".logOutToggle").hide();
 
 
     //-------password match begin------------

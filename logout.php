@@ -1,12 +1,14 @@
 
-    <div class="logOutBox">
+ 
         <form id="logOut" action="index.php" method="POST">
                 
-            <button type='button' class='logOut'>Log Out</button>
+            <div class="welcome">
+                <?php echo 'Welcome, ' . $userName;?>
+            </div>
+            <button type='submit' class='logOut'>Log Out</button>
 
 
-            <!-- <input type='hidden' name='action' value='login'> -->
+            <input type='hidden' name='action' value='logOut'>
 
 
         </form>
-    </div>
