@@ -62,10 +62,10 @@ $(function() {
 
         $.ajax({
             url: "search.php",
-            data: userParam,
             cache: false,
             dataType: 'json',
             type: 'POST',
+            data: userParam,
             success: function(data){
                 var template = Handlebars.compile( $('#searchResults').html() );
                 for (i in data.results) {

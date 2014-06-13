@@ -12,6 +12,7 @@
     position: relative;
 }*/
 
+
 .err {
     color: red;
     font-weight: bold; 
@@ -131,6 +132,16 @@ button {
     position: absolute;
     right: 10px;
 }
+.logOutBox {
+    display: inline-block;
+    position: relative;
+}
+.logOut {
+    height: 30px;
+    width:65px;
+    position: absolute;
+    right: 80px;
+}
 
 .toggle {
     width: 100px;
@@ -194,5 +205,7 @@ td, tr {
 
 .pac-icon{
     background-image: none;
+    
 }
+
 
