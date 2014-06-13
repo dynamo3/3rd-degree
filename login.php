@@ -2,7 +2,7 @@
 // Include Database Class
 include('db.php');
 
-include('initialize.php');
+// include('initialize.php');
 
 function logIn(){
 
@@ -40,18 +40,19 @@ function logIn(){
             if ($_POST['password'] == $row['password']) {
                 $_SESSION['id'] = $row['id'];
                 
+                print_r('Welcome,' . ' ' . $_POST['email']);
                 // return $row['email'] . ' successfully logged in. <br>';
 
             } else {
-                return $row['email'] . ' password did not match. <br>';
+                print_r ($row['email'] . ' password did not match. <br>');
 
             }
         } else {
-            return $_POST['email'] . ' is an unknown user, please register. <br>';
+            print_r ($_POST['email'] . ' is an unknown user, please register. <br>');
 
         }
     } else {
-        return ' Invalid email address was entered. <br>';
+        print_r (' Invalid email address was entered. <br>');
 
     }
 }

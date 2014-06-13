@@ -12,14 +12,15 @@
     <div class="heading">
         <div class="logo">Tasty Trend</div>
         <?php 
-            include ('initialize.php');
+            
+            // include ('initialize.php');
             include ('buttons.php');
             if(!is_numeric($_SESSION['id'])) {
-                include ('buttons.php');
+                // include ('buttons.php');
         
             } else {
                 include('logout.php');
-                echo "congrats";
+                // echo "congrats";
             }
             // echo $logInStatus . '<br>'; echo $registerStatus;
         

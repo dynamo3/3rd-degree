@@ -1,45 +1,45 @@
 <?php
 
 
-session_start();
+// session_start();
 
-//$_POST['username'];
-//$_POST['password'];
+// //$_POST['username'];
+// //$_POST['password'];
 
-//SQL
+// //SQL
 
-$sql = "SELECT user_id FROM user WHERE password = {$_POST['password']}";
+// $sql = "SELECT user_id FROM user WHERE password = {$_POST['password']}";
 
-//Execute
+// //Execute
 
-//no results, so no loggin
+// //no results, so no loggin
 
-if ($results->num_rows == 0) {
+// if ($results->num_rows == 0) {
 
-}
+// }
 
-//Get Row
+// //Get Row
 
-$row = $results->fetch_assoc();
+// $row = $results->fetch_assoc();
 
-$_SESSION['user_id'] = $row['user_id'];
+// $_SESSION['user_id'] = $row['user_id'];
 
-header('Location: account.php');
-exit();
-
-
+// header('Location: account.php');
+// exit();
 
 
-//account page:
 
-include('initialize.php');
-//this is failure point
-session_start();
 
-if (!is_numeric($_SESSION['user_id'])) {
-    header('Location login.php');
-    exit();
-}
+// //account page:
 
-echo 'welcome to your account';
+// include('initialize.php');
+// //this is failure point
+// session_start();
+
+// if (!is_numeric($_SESSION['user_id'])) {
+//     header('Location login.php');
+//     exit();
+// }
+
+// echo 'welcome to your account';
 ?>

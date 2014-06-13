@@ -2,6 +2,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
     
+    include('initialize.php');
     // $logInStatus = '';
     // $registerStatus = '';
 
@@ -10,7 +11,9 @@
             include ('login.php');
             logIn();
 
-            print_r('Welcome,' . ' ' . $_POST['email']);
+            // print_r('Welcome,' . ' ' . $_POST['email']);
+
+            // $()
 
         } else if($_POST['action']=='register'){
             include ('register.php');
