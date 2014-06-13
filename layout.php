@@ -11,21 +11,19 @@
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-        <div class="buttons"> 
-            <?php 
-                include ('initialize.php');
+        <?php 
+            include ('initialize.php');
+            include ('buttons.php');
+            if(!is_numeric($_SESSION['id'])) {
                 include ('buttons.php');
-                if(!is_numeric($_SESSION['id'])) {
-                    // include ('buttons.php');
-
-                } else {
-                    include('logout.php');
-                    echo "congrats";
-                }
-                // echo $logInStatus . '<br>'; echo $registerStatus;
-
-            ?> 
-        </div>
+        
+            } else {
+                include('logout.php');
+                echo "congrats";
+            }
+            // echo $logInStatus . '<br>'; echo $registerStatus;
+        
+        ?>
         
     </div>
 
