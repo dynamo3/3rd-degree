@@ -31,6 +31,7 @@ class DB {
         // Execute Query
         $results = $this->link->query($sql);
 
+
         // Successful
         if ($results !== FALSE) {
             return $results;
@@ -40,6 +41,9 @@ class DB {
             exit('SQL Error: ' . $this->link->error . "<br><br>" . $sql);
         }
 
+    }
+    public function lastId() {
+        return $this->link->insert_id;
     }
 
 }

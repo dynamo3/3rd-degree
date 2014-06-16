@@ -34,6 +34,8 @@ function register() {
 
             $results = $db->execute($sql);
 
+            return($db->lastId());
+
             
         }
 

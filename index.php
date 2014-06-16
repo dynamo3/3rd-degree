@@ -25,11 +25,11 @@
 
             } else if($_POST['action']=='register'){
                 include ('register.php');
-                register();
+                // register();
 
-                $_SESSION['id'] = 9; // TODO Set this to the real value.. get DB value
+                $_SESSION['id'] = register(); // TODO Set this to the real value.. get DB value
                 $userName = $_POST['email']; // TODO Set this to the real value ... get db value
-               
+               print_r($_SESSION['id']);
 
             }
         }else if($_POST['action']=='logOut'){
