@@ -9,17 +9,11 @@ $(function() {
         $(".logToggle").toggle("blind");
     });
 
-    $(".logOut").click(function(){
-        
-
-    });
-
     $( ".toggle" ).hide();
     $(".logToggle").hide();
-    $(".logOutToggle").hide();
 
 
-    //-------password match begin------------
+    // //-------password match begin------------
 
     $("#confirmPassword").keyup(function() {
         //Store the password field objects into variables ...
@@ -55,6 +49,8 @@ $(function() {
 
     $('.go').click(function(){
 
+        $('tbody').html('');
+
        var userParam = {
             category: $("#category").val(),
             zip_code: $(".zip").val()
@@ -75,7 +71,6 @@ $(function() {
 
         });
 
-        $('tbody').html('');
 
     });
 
