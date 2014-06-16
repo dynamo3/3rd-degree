@@ -20,7 +20,7 @@
             } else if($_POST['action']=='register'){
                 include ('register.php');
                 register();
-                // $registerStatus = register();
+               
             }
         }else if($_POST['action']=='logOut'){
             // A user IS logged in

@@ -34,7 +34,6 @@ function register() {
 
             $results = $db->execute($sql);
 
-            return "1 record added";
             
         }
 

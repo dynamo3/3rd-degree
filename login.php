@@ -9,9 +9,6 @@ function logIn(){
     // Start Database Object
     $db = new DB();
 
-    // nobody is logged in yet
-    $userLoggedIn = false;
-
     // check for valid email address before searching database.
 
     $reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
@@ -33,15 +30,12 @@ function logIn(){
 
             // make a $row variable for results
             $row = $results->fetch_assoc();
-            // echo $row['id'] . ' | ' .
-            //      $row['email'] . ' | ' .
-            //      $row['password'] . '<br>';
+
 
             if ($_POST['password'] == $row['password']) {
                 $_SESSION['id'] = $row['id'];
                 
                 return $_POST['email'];
-                // return $row['email'] . ' successfully logged in. <br>';
 
             } else {
                 print_r ($row['email'] . ' password did not match. <br>');
