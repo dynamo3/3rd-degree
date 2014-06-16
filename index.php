@@ -9,6 +9,10 @@
         $userName = '';
     }
 
+    function last_user_id() {
+
+    }
+
     if($_POST){
         
         if (!is_numeric($_SESSION['id'])) {
@@ -22,7 +26,11 @@
             } else if($_POST['action']=='register'){
                 include ('register.php');
                 register();
+
+                $_SESSION['id'] = 9; // TODO Set this to the real value.. get DB value
+                $userName = $_POST['email']; // TODO Set this to the real value ... get db value
                
+
             }
         }else if($_POST['action']=='logOut'){
             // A user IS logged in
