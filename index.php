@@ -3,9 +3,11 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
     
-    include('initialize.php');
 
-    $userName = '';
+    if (!(session_status() == PHP_SESSION_ACTIVE)) {
+        include('initialize.php');
+        $userName = '';
+    }
 
     if($_POST){
         

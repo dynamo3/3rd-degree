@@ -11,8 +11,8 @@ class DB {
     public function __construct() {
 
         // Connect to the database
-        // $this->link = new mysqli("rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com","3rddegree","rockit","3rddegree");
-        $this->link = new mysqli("localhost","root","","3rddegree");
+        $this->link = new mysqli("rockit.ccyd2ljjwzet.us-east-1.rds.amazonaws.com","3rddegree","rockit","3rddegree");
+        // $this->link = new mysqli("localhost","root","","3rddegree");
         // If the connection had problem, output that now
         if ($this->link->connect_errno) {
             die('Connection Error: ' . $link->connect_error);
