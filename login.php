@@ -40,7 +40,7 @@ function logIn(){
             if ($_POST['password'] == $row['password']) {
                 $_SESSION['id'] = $row['id'];
                 
-                print_r('Welcome,' . ' ' . $_POST['email']);
+                return $_POST['email'];
                 // return $row['email'] . ' successfully logged in. <br>';
 
             } else {

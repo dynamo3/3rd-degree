@@ -9,9 +9,14 @@ $(function() {
         $(".logToggle").toggle("blind");
     });
 
+    // $(".logOut").click(function(){
+    //     $('.logOutToggle').toggle('blind');
+
+    // });
+
     $( ".toggle" ).hide();
     $(".logToggle").hide();
-
+    // $(".logOutToggle").hide();
 
     // //-------password match begin------------
 
@@ -58,10 +63,10 @@ $(function() {
 
         $.ajax({
             url: "search.php",
-            data: userParam,
             cache: false,
             dataType: 'json',
             type: 'POST',
+            data: userParam,
             success: function(data){
                 var template = Handlebars.compile( $('#searchResults').html() );
                 for (i in data.results) {
