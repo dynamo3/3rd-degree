@@ -1,5 +1,4 @@
-;var App = App || {};
-(function($) {
+;(function($) {
 
   //--------geocoder turns location search value into lat/long for maps api-----------
   var geocoder;

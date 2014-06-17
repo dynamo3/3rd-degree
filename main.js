@@ -1,5 +1,4 @@
-;var App = App || {};
-(function($) {
+;(function($) {
 
    //-------drop down box for register and login --------
 
@@ -163,7 +162,6 @@
 
                       Icons.push(pin);
 
-
                 };
 
                 var geocoder;
@@ -177,7 +175,6 @@
                 map = new google.maps.Map(document.getElementById('map_div'), mapOptions);
 
                 for (var i in Icons){
-                    console.log("topper: " + i);
                     //--------geocode db address----------
                     var makePins  = function (index){
                         geocoder.geocode( { 'address': Addresses[index]}, function(results, status) { 
