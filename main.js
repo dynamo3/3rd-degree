@@ -2,6 +2,7 @@
 (function($) {
 
    //-------drop down box for register and login --------
+
     $(".register").click(function(){
         $(".toggle").toggle("blind");
         
@@ -72,88 +73,110 @@
             success: function(data) {
                 //-------put data into table on screen-------------
                 var template = Handlebars.compile( $('#searchResults').html() );
+                
+                var Icons = [];
+                var Titles = [];
+                var Addresses  =[];
+
                 for (i in data.results) {
                     $('tbody').append(template(data.results[i]));
                     
+                    var name = data.results[i]['name'];
+                    Titles.push(name);
+
+                    var address = data.results[i]['street_address'];
+                    Addresses.push(address);
                     
                     //-----------choosing which pin to use for each place---------------
-                    mapPin = "greenmed.png";
-                    // if(tweet_count <= 50) {
-                    //     if(rating <= 1.5) {
-                    //         var mapPin = "redsmall.png";
-                    //     } else if (rating <= 2.5) {
-                    //         var mapPin = "orangesmall.png";
-                    //     } else if (rating <= 3.5) {
-                    //         var mapPin = "yellowsmall.png";
-                    //     } else { 
-                    //         var mapPin = "greensmall.png";
-                    //     }
+                    var tweet_count = data.results[i]['tweet_count'];
+                    var rating = data.results[i]['rating'];
+                    var pin;
+                    if(tweet_count <= 50) {
+                        if(rating <= 1.5) {
+                            pin = "redsmall.png";
+                        } else if (rating <= 2.5) {
+                            pin = "orangesmall.png";
+                        } else if (rating <= 3.5) {
+                            pin = "yellowsmall.png";
+                        } else { 
+                            pin = "greensmall.png";
+                        }
 
-                    // } else if (tweet_count <= 100) {
-                    //     if(rating <= 1.5) {
-                    //         var mapPin = "redsmed.png";
-                    //     } else if (rating <= 2.5) {
-                    //         var mapPin = "orangemed.png";
-                    //     } else if (rating <= 3.5) {
-                    //         var mapPin = "yellowmed.png";
-                    //     } else { 
-                    //         var mapPin = "greenmed.png";
-                    //     }
+                    } else if (tweet_count <= 100) {
+                        if(rating <= 1.5) {
+                            pin = "redsmed.png";
+                        } else if (rating <= 2.5) {
+                            pin = "orangemed.png";
+                        } else if (rating <= 3.5) {
+                             pin = "yellowmed.png";
+                        } else { 
+                             pin = "greenmed.png";
+                        }
 
-                    // } else if (tweet_count <= 150) {
-                    //     if(rating <= 1.5) {
-                    //         var mapPin = "redlarge.png";
-                    //     } else if (rating <= 2.5) {
-                    //         var mapPin = "orangelarge.png";
-                    //     } else if (rating <= 3.5) {
-                    //         var mapPin = "yellowlarge.png";
-                    //     } else { 
-                    //         var mapPin = "greenlarge.png";
-                    //     }
+                    } else if (tweet_count <= 150) {
+                        if(rating <= 1.5) {
+                             pin = "redlarge.png";
+                        } else if (rating <= 2.5) {
+                             pin = "orangelarge.png";
+                        } else if (rating <= 3.5) {
+                             pin = "yellowlarge.png";
+                        } else { 
+                             pin = "greenlarge.png";
+                        }
 
-                    // } else {
-                    //     if(rating <= 1.5) {
-                    //         var mapPin = "redxl.png";
-                    //     } else if (rating <= 2.5) {
-                    //         var mapPin = "orangexl.png";
-                    //     } else if (rating <= 3.5) {
-                    //         var mapPin = "yellowxl.png";
-                    //     } else { 
-                    //         var mapPin = "greenxl.png";
-                    //     }
-                    //   }
-
-                    //--------geocode db address----------
-                    var geocoder;
-                    var map;
-                        geocoder = new google.maps.Geocoder();
-                        var latlng = new google.maps.LatLng(33.433702, -111.941948);
-                        var mapOptions = {
-                          zoom: 13,
-                          center: latlng
-                        };
-                        map = new google.maps.Map(document.getElementById('map_div'), mapOptions);
-
-                    address = data.results[i]['street_address'];
-                    geocoder.geocode( { 'address': address}, function(results, status) {
-                      if (status == google.maps.GeocoderStatus.OK) {
-                        map.setCenter(results[0].geometry.location);
-                        //-------defining pin/marker properties-------------
-                        var marker = new google.maps.Marker({
-                            map: map,
-                            position: results[0].geometry.location,
-                            icon: mapPin,
-                            title:data.results['name']
-                        });
-                      } else {
-                        alert('Geocode was not successful for the following reason: ' + status);
+                    } else {
+                        if(rating <= 1.5) {
+                             pin = "redxl.png";
+                        } else if (rating <= 2.5) {
+                             pin = "orangexl.png";
+                        } else if (rating <= 3.5) {
+                             pin = "yellowxl.png";
+                        } else { 
+                             pin = "greenxl.png";
+                        }
                       }
-                    });
+
+                      Icons.push(pin);
+
+
                 };
+
+                var geocoder;
+                var map;
+                geocoder = new google.maps.Geocoder();
+                var latlng = new google.maps.LatLng(33.433702, -111.941948);
+                var mapOptions = {
+                  zoom: 12,
+                  center: latlng
+                };
+                map = new google.maps.Map(document.getElementById('map_div'), mapOptions);
+
+                for (var i in Icons){
+                    console.log("topper: " + i);
+                    //--------geocode db address----------
+                    var makePins  = function (index){
+                        geocoder.geocode( { 'address': Addresses[index]}, function(results, status) { 
+                          if (status == google.maps.GeocoderStatus.OK) {
+                            map.setCenter(results[0].geometry.location);
+                            //-------defining pin/marker properties-------------
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: results[0].geometry.location,
+                                icon: Icons[index],
+                                title: Titles[index]
+                            });
+                          } else {
+                            alert('Geocode was not successful for the following reason: ' + status);
+                          }
+                        });
+
+                    };
+
+                    makePins(i);
+                }
             }
 
         });
-
 
     });
 
