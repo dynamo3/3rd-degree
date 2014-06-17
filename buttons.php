@@ -11,7 +11,7 @@
 
         <fieldset class="logToggle">
             <label for='email' >Email Address*:</label>
-            <input type='text' name='email' id='logInEmail' maxlength="50">
+            <input type='text' name='logInEmail' id='logInEmail' maxlength="50">
         
             <label for='password' >Password*:</label>
             <input type='password' name='password' id='logInPassword' maxlength="50" >

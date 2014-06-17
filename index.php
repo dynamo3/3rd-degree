@@ -27,9 +27,8 @@
                 include ('register.php');
                 // register();
 
-                $_SESSION['id'] = register(); // TODO Set this to the real value.. get DB value
-                $userName = $_POST['email']; // TODO Set this to the real value ... get db value
-               print_r($_SESSION['id']);
+                $_SESSION['id'] = register(); 
+                $userName = $_POST['email']; 
 
             }
         }else if($_POST['action']=='logOut'){
@@ -39,8 +38,6 @@
     }
 
     require 'layout.php';
-
-
 
 
 ?>
