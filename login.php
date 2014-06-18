@@ -37,17 +37,31 @@ function logIn(){
                 
                 return $_POST['logInEmail'];
 
+        $status = array('response' => 'ok', 
+            'msg' => 'Welcome'); 
+
             } else {
+        $status = array('response' => 'error', 
+            'msg' => 'Sorry, password did not match'); 
                 print_r ($row['email'] . ' password did not match. <br>');
 
             }
         } else {
+        $status = array('response' => 'error', 
+            'msg' => 'Unknown email address was entered'); 
+
             print_r ($_POST['logInEmail'] . ' is an unknown user, please register. <br>');
 
         }
     } else {
+
+        $status = array('response' => 'error', 
+            'msg' => 'Invalid email address was entered'); 
+
         print_r (' Invalid email address was entered. <br>');
 
     }
+
+    echo json_encode($status);
 }
 ?>
