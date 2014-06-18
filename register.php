@@ -26,7 +26,8 @@ function register() {
         if ($results->num_rows != 0) {
 
             // already registered, might offer password recovery from here.
-            return ' Sorry, this email address is already registered. <br>';
+            print_r (' Sorry, this email address is already registered. <br>');
+
         } else {
 
             $sql="INSERT INTO user (email, password)
