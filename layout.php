@@ -11,20 +11,51 @@
 <div class="mainContainer">
     <div class="heading">
         <div class="logo">Tasty Trend</div>
-        <?php 
+        <!-- status port -->
+        <div class="status">
+        <form id="logIn" action="index.php" method="POST">
             
-            if(!is_numeric($_SESSION['id'])) {
-                include ('buttons.php');
+        <button type='button' class='logIn'>Log In</button>
+
+        <fieldset class="logToggle">
+            <label for='email' >Email Address*:</label>
+            <input type='text' name='logInEmail' id='logInEmail' maxlength="50">
         
-            } else {
-                include('logout.php');
-                // echo "congrats";
-                
-            }
-            // echo $logInStatus . '<br>'; echo $registerStatus;
+            <label for='password' >Password*:</label>
+            <input type='password' name='password' id='logInPassword' maxlength="50" >
         
-        ?>
+            <input type='submit' name='Submit' value='Submit' >
+
+            <input type='hidden' name='action' value='login'>
+        </fieldset>
+
+    </form>
+
+    <form id="register" action="index.php" method="POST">
         
+        <button type='button' class='register'>Register</button>
+
+            <fieldset class="toggle">
+           
+            <label for='email' >Email Address*:</label>
+            <input type='text' name='email' id='email' maxlength="50">
+        
+            <label for='password' >Password*:</label>
+            <input type='password' name='password' id='password' maxlength="50" >
+            
+            <label for='confirmPassword' >Confirm Password*:</label>
+            <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" >
+            <div id="confirmMessage" class="confirmMessage"></div>
+            
+            <input type='submit' id="submitReg" name='Submit' value='Submit' disabled>
+
+            <input type='hidden' name='action' value='register'>
+             
+            </fieldset>
+    </form>
+            
+        
+        </div>
     </div>
 
     <div class="results">
@@ -33,7 +64,7 @@
             
         <form action="model.php" method="GET"></form>
             <select name="category" id="category">
-                <option value="All">All</option>
+                <option value="Alindexl">All</option>
                 <option value="American">American</option>
                 <option value="Greek">Greek</option>
                 <option value="Italian">Italian</option>
