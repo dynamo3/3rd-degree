@@ -30,6 +30,25 @@
 
     });
 
+    $('.logIn').click(function(){
+
+        var validate = {
+            email: $("#logInEmail").val(),
+            password: $("#logInPassword").val()
+        };
+
+        $.ajax({
+            url: "login.php",
+            cache: false,
+            dataType: 'json',
+            type: 'POST',
+            data: validate,
+            success: function(data) { 
+
+                console.log('success');
+            }
+        });
+    });
 // //--------------Register email validation-------
     $("#email").keyup(function(){
         var emailInput = $('#email').val();
@@ -44,6 +63,7 @@
         }
 
     });
+
 
     // //-------password match begin------------
 
