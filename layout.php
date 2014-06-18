@@ -80,8 +80,7 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-<script src="emailLogin.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 <script src="main.js"></script>
 <script src="map.js"></script>
 <script type="text/javascript" src="handlebars-v1.3.0.js"></script>
