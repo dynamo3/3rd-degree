@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tasty Trend</title>
-    <link rel="shortcut icon" href="ttlogo.png">
+    <link rel="shortcut icon" href="images/ttlogo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>

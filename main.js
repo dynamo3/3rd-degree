@@ -117,46 +117,46 @@
                     var pin;
                     if(tweet_count <= 50) {
                         if(rating <= 1.5) {
-                            pin = "redsmall.png";
+                            pin = "images/redsmall.png";
                         } else if (rating <= 2.5) {
-                            pin = "orangesmall.png";
+                            pin = "images/orangesmall.png";
                         } else if (rating <= 3.5) {
-                            pin = "yellowsmall.png";
+                            pin = "images/yellowsmall.png";
                         } else { 
-                            pin = "greensmall.png";
+                            pin = "images/greensmall.png";
                         }
 
                     } else if (tweet_count <= 100) {
                         if(rating <= 1.5) {
-                            pin = "redsmed.png";
+                            pin = "images/redsmed.png";
                         } else if (rating <= 2.5) {
-                            pin = "orangemed.png";
+                            pin = "images/orangemed.png";
                         } else if (rating <= 3.5) {
-                             pin = "yellowmed.png";
+                             pin = "images/yellowmed.png";
                         } else { 
-                             pin = "greenmed.png";
+                             pin = "images/greenmed.png";
                         }
 
                     } else if (tweet_count <= 150) {
                         if(rating <= 1.5) {
-                             pin = "redlarge.png";
+                             pin = "images/redlarge.png";
                         } else if (rating <= 2.5) {
-                             pin = "orangelarge.png";
+                             pin = "images/orangelarge.png";
                         } else if (rating <= 3.5) {
-                             pin = "yellowlarge.png";
+                             pin = "images/yellowlarge.png";
                         } else { 
-                             pin = "greenlarge.png";
+                             pin = "images/greenlarge.png";
                         }
 
                     } else {
                         if(rating <= 1.5) {
-                             pin = "redxl.png";
+                             pin = "images/redxl.png";
                         } else if (rating <= 2.5) {
-                             pin = "orangexl.png";
+                             pin = "images/orangexl.png";
                         } else if (rating <= 3.5) {
-                             pin = "yellowxl.png";
+                             pin = "images/yellowxl.png";
                         } else { 
-                             pin = "greenxl.png";
+                             pin = "images/greenxl.png";
                         }
                       }
 
