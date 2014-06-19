@@ -9,7 +9,7 @@ include('db.php');
     // check for valid email address before searching database.
     $email = trim($_POST['logInEmail']);
 
-    $reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+$/';
+    $reg = '/^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/';
 
     if (preg_match($reg, $_POST['logInEmail']) == 1) {
 
