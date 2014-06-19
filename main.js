@@ -1,5 +1,5 @@
 ;(function($) {
-
+    $('.logOut').hide();
    //-------drop down box for register and login --------
 
     $(".register").click(function(){
@@ -47,11 +47,16 @@
 
                 var dataError = $.parseJSON(xhr.responseText);
                 console.log(dataError.msg);
+                $('.logToggle div').remove();
+                $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
                 
             },
 
             success: function(xhr) { 
 
+                $('div.status').hide();
+                $('.logOut').show();
+                $('.welcome').text(xhr.msg + ', ' + validate.logInEmail);
                 console.log(xhr.msg);
 
             }

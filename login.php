@@ -37,7 +37,7 @@ include('db.php');
             } else {
 
                 $status = array('response' => 'error', 
-                    'msg' => 'Sorry, password did not match'); 
+                    'msg' => 'invalid password'); 
                 http_response_code(401);
 
               }
@@ -45,7 +45,7 @@ include('db.php');
         } else {
 
             $status = array('response' => 'error', 
-                'msg' => 'Unknown email address was entered');
+                'msg' => 'Unknown email address');
              http_response_code(400); 
 
           }
@@ -53,7 +53,7 @@ include('db.php');
     } else {
 
         $status = array('response' => 'error', 
-            'msg' => 'Invalid email address was entered'); 
+            'msg' => 'Invalid email address'); 
         http_response_code(400);
 
       }

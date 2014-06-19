@@ -9,7 +9,7 @@ function register() {
 
     $reg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
 
-    if (preg_match($reg, $_POST['email']) === 1) {
+    if (preg_match($reg, $_POST['email']) == 1) {
 
         // echo ' valid email address <br>';
 

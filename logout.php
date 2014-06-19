@@ -1,5 +1,5 @@
 
- 
+    <div class="logOut">
         <form id="logOut" action="index.php" method="POST">
                 
             <div class="welcome">
@@ -12,3 +12,4 @@
 
 
         </form>
+    </div>
