@@ -44,10 +44,15 @@
             cache: false,
             dataType: 'json',
             data: validate,
+            error: function(jqXHR, statusText, errorThrown){
+
+                    console.log(jqHXR.responseText);
+                },
+
+                // console.log(data);
             success: function(data) { 
 
                 console.log('success');
-                console.log(data.message[i]);
                 // if(status.response[] == 'error'){
                 //     // $(".status").html("#logOut");
                 //     console.log('error');
