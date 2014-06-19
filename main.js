@@ -47,7 +47,8 @@
 
                 var dataError = $.parseJSON(xhr.responseText);
                 console.log(dataError.msg);
-                $('.logToggle div').remove();
+
+                $('.logToggle div').remove(); //removing the div created below so there isn't a duplicate message
                 $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
                 
             },
@@ -98,8 +99,8 @@
 
                 var dataError = $.parseJSON(xhr.responseText);
                 console.log(dataError.msg);
-                // $('.logToggle div').remove();
-                // $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
+                $('.toggle div').remove();
+                $('.toggle').prepend('<div>' + dataError.msg + '</div>');
                 
             },
 
@@ -108,8 +109,6 @@
                 $('div.status').hide();
                 $('.logOut').show();
                 $('.welcome').text(xhr.msg + ', ' + validate.email);
-                console.log(xhr);
-
             }
 
         }); 
