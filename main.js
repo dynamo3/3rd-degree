@@ -14,7 +14,7 @@
     $( ".toggle" ).hide();
     $(".logToggle").hide();
 
-// //--------------Login email validation-------
+// //--------------Server side Login email validation-------
     
     $("#logInEmail").keyup(function(){
         var emailInput = $('#logInEmail').val();
@@ -100,7 +100,7 @@
         return false;
     });
 
-    // //--------------Register email validation-------
+    // //--------------Client Side Register email validation-------
     $("#email").keyup(function(){
         var emailInput = $('#email').val();
         var filter = /^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/;
@@ -115,7 +115,7 @@
 
     });
 
-    // // ------ registration password validation------
+    // // ------Client Side registration password validation------
     $("#password").keyup(function(){
         var regpass = $('#password').val();
         var filter = /^((?=.*(\d|[@#$%]))(?=.*[a-zA-Z]).{6,20})/;
@@ -158,15 +158,19 @@
             }
     });
     //----------registration submit button disabled/enabled----------
-    $('.password').keyup( function(){
+    $('.toggle').keyup( function(){
+        var email = $('#email').val();
         var regpass1 = $('#password').val();
         var regpass2 = $('#confirmPassword').val();
-        var filter = /^((?=.*(\d|[@#$%]))(?=.*[a-zA-Z]).{6,20})/;
-        console.log(regpass1);
-        console.log(regpass2);
-        if(filter.test(regpass1)) {
-            if(regpass1==regpass2){
-            $('#submitReg').prop("disabled", false);
+        var passfilter = /^((?=.*(\d|[@#$%]))(?=.*[a-zA-Z]).{6,20})/;
+        var emailfilter = /^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/;
+        if(emailfilter.test(email)) {            
+            if(passfilter.test(regpass1)) {
+                if(regpass1==regpass2){
+                    $('#submitReg').prop("disabled", false);
+                } else {
+                    $('#submitReg').prop("disabled", true);
+                }
             } else {
                 $('#submitReg').prop("disabled", true);
             }
