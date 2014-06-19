@@ -33,10 +33,9 @@
     $('.logInSubmit').click(function(){
 
         var validate = {
-            email: $("#logInEmail").val(),
+            logInEmail: $("#logInEmail").val(),
             password: $("#logInPassword").val()
         };
-        console.log("I am here");
 
         $.ajax({
             url: "login.php",
@@ -44,19 +43,18 @@
             cache: false,
             dataType: 'json',
             data: validate,
-            error: function(jqXHR, statusText, errorThrown){
+            error: function(xhr){
 
-                    console.log(jqHXR.responseText);
-                },
+                var dataError = $.parseJSON(xhr.responseText);
+                console.log(dataError.msg);
+                
+            },
 
-                // console.log(data);
-            success: function(data) { 
+            success: function(xhr) { 
 
-                console.log('success');
-                // if(status.response[] == 'error'){
-                //     // $(".status").html("#logOut");
-                //     console.log('error');
-                // }
+                // var dataSuccess = $.parseJSON(xhr.responseText);
+                console.log(xhr.msg);
+
             }
 
         }); 
