@@ -2,7 +2,6 @@
 // Include Database Class
 include('db.php');
 
-function register() {
 // Start Database Object
     $db = new DB();
     // check for valid email address before searching database.
@@ -11,8 +10,6 @@ function register() {
 
     if (preg_match($reg, $_POST['email']) == 1) {
 
-        // echo ' valid email address <br>';
-
         // Write SQL Statement
         $sql = "SELECT * FROM user 
         WHERE email=\"{$_POST['email']}\"";
@@ -20,13 +17,15 @@ function register() {
         // Execute SQL Statement
         $results = $db->execute($sql);
 
-        // print_r($results);
-
         // check for a matching entry for a registered user
         if ($results->num_rows != 0) {
 
             // already registered, might offer password recovery from here.
-            print_r (' Sorry, this email address is already registered. <br>');
+
+            $status = array('response' => 'error', 
+                'msg' => 'This address is already registered.');
+             http_response_code(400); 
+
 
         } else {
 
@@ -35,12 +34,16 @@ function register() {
 
             $results = $db->execute($sql);
 
-            return($db->lastId());
-
+            $status = array('response' => 'ok', 
+                    'msg' => 'Welcome'); 
             
         }
 
     }
-}
+
+    header('Content-Type: application/json');
+
+    echo json_encode($status);
+
 
 ?>

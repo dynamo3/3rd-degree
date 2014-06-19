@@ -21,14 +21,12 @@
             if ($_POST['action']=='login') {
                 include ('login.php');
 
-                $userName = logIn();
+                // $userName = logIn();
 
             } else if($_POST['action']=='register'){
                 include ('register.php');
-                // register();
 
-                $_SESSION['id'] = register(); 
-                $userName = $_POST['email']; 
+                // $userName = register(); 
 
             }
         }else if($_POST['action']=='logOut'){

@@ -47,7 +47,8 @@
 
                 var dataError = $.parseJSON(xhr.responseText);
                 console.log(dataError.msg);
-                $('.logToggle div').remove();
+
+                $('.logToggle div').remove(); //removing the div created below so there isn't a duplicate message
                 $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
                 
             },
@@ -64,6 +65,41 @@
         }); 
         return false;
     });
+    $('#submitReg').click(function(){
+
+        var validate = {
+            email: $("#email").val(),
+            password: $("#password").val()
+        };
+
+        // console.log(validate);
+
+        $.ajax({
+            url: "register.php",
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: validate,
+            error: function(xhr){
+
+                var dataError = $.parseJSON(xhr.responseText);
+                console.log(dataError.msg);
+                $('.toggle div').remove();
+                $('.toggle').prepend('<div>' + dataError.msg + '</div>');
+                
+            },
+
+            success: function(xhr) { 
+
+                $('div.status').hide();
+                $('.logOut').show();
+                $('.welcome').text(xhr.msg + ', ' + validate.email);
+            }
+
+        }); 
+        return false;
+    });
+
     // //--------------Register email validation-------
     $("#email").keyup(function(){
         var emailInput = $('#email').val();
@@ -85,9 +121,7 @@
         var filter = /^((?=.*(\d|[@#$%]))(?=.*[a-zA-Z]).{6,20})/;
 
         if(!filter.test(regpass)){
-
             $('#password').css('background-color', '#F6CED8');
-       
         }else {
             $('#password').css('background-color', '#64CE7F');
         }
