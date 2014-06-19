@@ -4,7 +4,7 @@ include('db.php');
 
 // include('initialize.php');
 
-function logIn(){
+
 
     // Start Database Object
     $db = new DB();
@@ -33,35 +33,46 @@ function logIn(){
 
 
             if ($_POST['password'] == $row['password']) {
+
                 $_SESSION['id'] = $row['id'];
                 
-                return $_POST['logInEmail'];
+                // return $_POST['logInEmail'];
 
-        $status = array('response' => 'ok', 
-            'msg' => 'Welcome'); 
+                $status = array('response' => 'ok', 
+                    'msg' => 'Welcome'); 
+
+            // print_r('ok');
 
             } else {
-        $status = array('response' => 'error', 
-            'msg' => 'Sorry, password did not match'); 
-                print_r ($row['email'] . ' password did not match. <br>');
+
+                $status = array('response' => 'error', 
+                    'msg' => 'Sorry, password did not match'); 
+                http_response_code(401);
+                    // print_r ($row['email'] . ' password did not match. <br>');
 
             }
         } else {
-        $status = array('response' => 'error', 
-            'msg' => 'Unknown email address was entered'); 
 
-            print_r ($_POST['logInEmail'] . ' is an unknown user, please register. <br>');
+            $status = array('response' => 'error', 
+                'msg' => 'Unknown email address was entered');
+             http_response_code(400); 
+
+            // print_r ($_POST['logInEmail'] . ' is an unknown user, please register. <br>');
 
         }
     } else {
 
         $status = array('response' => 'error', 
             'msg' => 'Invalid email address was entered'); 
+        http_response_code(400);
 
-        print_r (' Invalid email address was entered. <br>');
+        // print_r (' Invalid email address was entered. <br>');
 
     }
 
+
+    header('Content-Type: application/json');
+
     echo json_encode($status);
-}
+
 ?>

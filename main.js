@@ -30,24 +30,32 @@
 
     });
 
-    $('.logIn').click(function(){
+    $('.logInSubmit').click(function(){
 
         var validate = {
             email: $("#logInEmail").val(),
             password: $("#logInPassword").val()
         };
+        console.log("I am here");
 
         $.ajax({
             url: "login.php",
+            type: 'POST',
             cache: false,
             dataType: 'json',
-            type: 'POST',
             data: validate,
             success: function(data) { 
 
                 console.log('success');
+                console.log(data.message[i]);
+                // if(status.response[] == 'error'){
+                //     // $(".status").html("#logOut");
+                //     console.log('error');
+                // }
             }
-        });
+
+        }); 
+        return false;
     });
 // //--------------Register email validation-------
     $("#email").keyup(function(){

@@ -1,10 +1,4 @@
-<!-- <!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head> -->
-<!-- <body> -->
+<!-- 
     <form id="logIn" action="index.php" method="POST">
             
         <button type='button' class='logIn'>Log In</button>
@@ -16,7 +10,7 @@
             <label for='password' >Password*:</label>
             <input type='password' name='password' id='logInPassword' maxlength="50" >
         
-            <input type='submit' name='Submit' value='Submit' >
+            <button class='logInSubmit' type='submit' name='Submit' value='Submit'></button>
 
             <input type='hidden' name='action' value='login'>
         </fieldset>
@@ -44,8 +38,4 @@
             <input type='hidden' name='action' value='register'>
              
             </fieldset>
-    </form>
-
-  <!--   
-</body>
-</html> -->
+    </form> -->
