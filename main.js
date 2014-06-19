@@ -96,8 +96,8 @@
             data: validate,
             error: function(xhr){
 
-                // var dataError = $.parseJSON(xhr.responseText);
-                console.log(xhr);
+                var dataError = $.parseJSON(xhr.responseText);
+                console.log(dataError.msg);
                 // $('.logToggle div').remove();
                 // $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
                 
@@ -107,7 +107,7 @@
 
                 $('div.status').hide();
                 $('.logOut').show();
-                // $('.welcome').text(xhr.msg + ', ' + validate.email);
+                $('.welcome').text(xhr.msg + ', ' + validate.email);
                 console.log(xhr);
 
             }
