@@ -27,8 +27,7 @@
                 include ('register.php');
                 // register();
 
-                $_SESSION['id'] = register(); 
-                $userName = $_POST['email']; 
+                $userName = register(); 
 
             }
         }else if($_POST['action']=='logOut'){

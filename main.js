@@ -79,6 +79,42 @@
 
     });
 
+    $('#submitReg').click(function(){
+
+        var validate = {
+            email: $("#email").val(),
+            password: $("#password").val()
+        };
+
+        // console.log(validate);
+
+        $.ajax({
+            url: "register.php",
+            type: 'POST',
+            cache: false,
+            dataType: 'json',
+            data: validate,
+            error: function(xhr){
+
+                // var dataError = $.parseJSON(xhr.responseText);
+                console.log(xhr);
+                // $('.logToggle div').remove();
+                // $('.logToggle').prepend('<div>' + dataError.msg + '</div>');
+                
+            },
+
+            success: function(xhr) { 
+
+                $('div.status').hide();
+                $('.logOut').show();
+                // $('.welcome').text(xhr.msg + ', ' + validate.email);
+                console.log(xhr);
+
+            }
+
+        }); 
+        return false;
+    });
 
     // //-------password match begin------------
 
