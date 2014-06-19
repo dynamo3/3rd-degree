@@ -52,7 +52,6 @@
 
             success: function(xhr) { 
 
-                // var dataSuccess = $.parseJSON(xhr.responseText);
                 console.log(xhr.msg);
 
             }
