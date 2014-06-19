@@ -42,10 +42,11 @@
                     <input type='text' name='email' id='email' maxlength="50">
                 
                     <label for='password' >Password*:</label>
-                    <input type='password' name='password' id='password' maxlength="50" >
-                    
+                    <input type='password' name='password' id='password' class='password' maxlength="50" >
+                    <div id="passwordMessage" class="passwordMessage"></div>
+
                     <label for='confirmPassword' >Confirm Password*:</label>
-                    <input type='password' name='confirmPassword' id='confirmPassword' maxlength="50" >
+                    <input type='password' name='confirmPassword' id='confirmPassword' class='password' maxlength="50" >
                     <div id="confirmMessage" class="confirmMessage"></div>
                     
                     <input type='submit' id="submitReg" name='Submit' value='Submit' disabled>
