@@ -113,7 +113,9 @@
     });
     //___________table data populate begin___________________________
     
-
+category3 = $("#category").val(),
+    console.log(category3);
+    
     $('.go').click(function(){
 
         $('tbody').html('');
@@ -122,6 +124,7 @@
             category: $("#category").val(),
             zip_code: $(".zip").val()
        };
+
 
         $.ajax({
             url: "search.php",

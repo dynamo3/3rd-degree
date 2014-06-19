@@ -78,7 +78,7 @@
             
         <form action="model.php" method="GET"></form>
             <select name="category" id="category">
-                <option value="Alindexl">All</option>
+                <option value="All">All</option>
                 <option value="American">American</option>
                 <option value="Greek">Greek</option>
                 <option value="Italian">Italian</option>
