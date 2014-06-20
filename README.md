@@ -1,4 +1,5 @@
 Grab Grub allows the user to search for restaurants by zip code to see which ones people are tweeting about. It also allows the user to see the rating based on reviews customers posted on yelp. We average reviews from the current month across websites to give the user up-to-date trending information on restaurants in the user's area.
+*Images used on this site are for example purposes only; we do not own the rights to all images. 
 
 
 as a user....
