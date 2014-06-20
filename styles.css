@@ -19,6 +19,11 @@
     src: url(fonts/Quicksand_Dash.otf);
 }
 
+@font-face {
+    font-family: QuicksandBold;
+    src: url(fonts/Quicksand_Bold.otf);
+}
+
 body {
     background: url("images/restraunt.tif") no-repeat top left;
     background-size: 100% 100%;
@@ -104,7 +109,6 @@ button {
     border-radius: 5px;
 }
 
-
 #register { /* register form*/
 
     display: inline-block;
@@ -112,7 +116,6 @@ button {
     margin: 5px;
     /*clear: right;*/
 }
-
 
 .register { /* register button*/
     min-height: 30px;
@@ -196,25 +199,29 @@ button.logOut { /* div around logout button & welcm msg*/
 table {
     background-color: rgba(12, 1, 43, .7);
     color: white;
+    font-family: QuicksandBold;
+    font-size: 18px;
     border-radius: 5px;
     display: inline-block;
+    width: 40%;
     margin-top: 15px;
+    text-align: center;
     float: left;
 }
 
-th{
-    padding:2px;
+th {
+    padding:3px;
     border-radius: 5px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
 }
 
 td, tr {
-/*    background-color: rgba(12, 1, 43, .7);*/
     color: white;
     border-bottom: 2px solid black;
     border-radius: 5px;
     margin: 10px, -2px;
-    width: 40%;
-    text-align: center;
     margin: 5px;
 }
 
