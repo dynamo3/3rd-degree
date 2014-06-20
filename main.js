@@ -122,11 +122,11 @@
         if(!filter.test(emailInput)){
 
             $('#email').css('background-color', '#F6CED8');
-            $('toggle #emailMessage').html('Please enter valid email');
+            $('.toggle .emailMessage').html('Please enter valid email');
        
         }else {
             $('#email').css('background-color', '#64CE7F');
-            $('toggle #emailMessage').html('');
+            $('.toggle .emailMessage').html('');
         }
 
     });
