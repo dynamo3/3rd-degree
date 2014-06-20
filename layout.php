@@ -26,7 +26,7 @@
                     <label for='password' >Password*:</label>
                     <input type='password' name='password' id='logInPassword' maxlength="50" >
                 
-                    <input class='logInSubmit' type='Submit' name='Submit' disabled>
+                    <input class='logInSubmit' type='Submit' name='Submit' disabled value='Submit'>
 
                     <input type='hidden' name='action' value='login'>
                 </fieldset>
