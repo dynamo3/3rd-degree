@@ -1,6 +1,7 @@
 ;(function($) {
 
     $('.logOut').hide();
+    $('table').hide();
    //-------drop down box for register and login --------
 
     $(".register").click(function(){
@@ -200,7 +201,6 @@
     //___________table data populate begin___________________________
     
     $('.go').click(function(){
-
         $('tbody').html('');
 
        var userParam = {
@@ -224,6 +224,9 @@
                 var Icons = [];
                 var Titles = [];
                 var Addresses  =[];
+                
+                $('.about').hide();
+                $('table').show();
 
                 for (i in data.results) {
                     $('tbody').append(template(data.results[i]));
