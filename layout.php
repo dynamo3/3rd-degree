@@ -96,7 +96,15 @@
         </div>
 
         <div id="map_div"></div>
+        <div class="about">
+            <h2>Welcome to Tasty Trend...</h2><br>
+            <p>Check out which restaurants are trending in your area. <br>
+            Simply choose a food type then enter your zip code. <br>
+            We'll give you a list of restaurants with <br>
+            their popularity and rating.<br><br>
+            Bon Appetite!
 
+        </div>
        
         <table>
             <thead>    

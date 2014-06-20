@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: QuicksandBold;
-    src: url(fonts/Quicksand_Bold.otf);
+    src: url(fonts/Quicksand-Bold.otf);
 }
 
 body {
@@ -155,7 +155,7 @@ button.logOut { /* div around logout button & welcm msg*/
 }
 
 .welcome { /* div around welcome msg when logged in*/
-    font-family: Quicksand;
+    font-family: QuicksandBold;
     position: absolute;
     top: 58px;
     right: 10px;
@@ -207,6 +207,26 @@ table {
     margin-top: 15px;
     text-align: center;
     float: left;
+}
+
+.about {
+    background-color: rgba(12, 1, 43, .7);
+    color: white;
+    font-family: QuicksandBold;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 40%;
+    margin-top: 15px;
+    text-align: center;
+    float: left;
+    padding: 10px;
+}
+
+.about h2 {
+    margin-top: 10px;
+    font-family: lobster;
+    text-shadow: 3px 3px 3px #000;
 }
 
 th {
