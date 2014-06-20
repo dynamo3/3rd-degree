@@ -108,9 +108,11 @@
         if(!filter.test(emailInput)){
 
             $('#email').css('background-color', '#F6CED8');
+            $('#emailMessage').html('Please enter valid email');
        
         }else {
             $('#email').css('background-color', '#64CE7F');
+            $('#emailMessage').html('');
         }
 
     });
@@ -122,8 +124,11 @@
 
         if(!filter.test(regpass)){
             $('#password').css('background-color', '#F6CED8');
+            $('#passwordMessage').html('-min of 6 characters');
+            $('#passwordMessage').append('<div class="passwordMessage">-min 1 number/special character</div>');
         }else {
             $('#password').css('background-color', '#64CE7F');
+            $('.passwordMessage').html('');
         }
 
     })
@@ -145,15 +150,13 @@
                 //Set the color to the good color and inform
                 //the user that they have entered the correct password 
                 pass2.style.backgroundColor = goodColor;
-                message.style.color = goodColor;
-                message.innerHTML = "Passwords Match!";
+                message.innerHTML = '';
             } else {
                 //The passwords do not match.
                 //Set the color to the bad color and
                 //notify the user.
                 pass2.style.backgroundColor = badColor;
-                message.style.color = badColor;
-                message.innerHTML = "Passwords Do Not Match!"
+                message.innerHTML = "Passwords Do Not Match"
                 
             }
     });

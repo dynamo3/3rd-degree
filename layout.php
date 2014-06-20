@@ -40,7 +40,8 @@
                    
                     <label for='email' >Email Address*:</label>
                     <input type='text' name='email' id='email' maxlength="50">
-                
+                    <div id="emailMessage" class="emailMessage"></div>
+
                     <label for='password' >Password*:</label>
                     <input type='password' name='password' id='password' class='password' maxlength="50" >
                     <div id="passwordMessage" class="passwordMessage"></div>
