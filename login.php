@@ -37,7 +37,7 @@ include('db.php');
             } else {
 
                 $status = array('response' => 'error', 
-                    'msg' => 'invalid password'); 
+                    'msg' => 'Invalid password'); 
                 http_response_code(401);
 
               }

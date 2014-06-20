@@ -170,10 +170,8 @@ button.logOut { /* div around logout button & welcm msg*/
 }
 
 .category { /* div around category and go */
-    /*border: dashed black 2px;
-    background-color: rgba(127, 90, 248, .8);*/ /*purple*/
     display: inline-block;
-    margin: 5px;
+    margin: 5px 20px;
     float: left;
 }
 
