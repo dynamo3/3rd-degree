@@ -14,22 +14,38 @@
     $( ".toggle" ).hide();
     $(".logToggle").hide();
 
-// //--------------Server side Login email validation-------
-    
+    // ----------client side login email validation---------
     $("#logInEmail").keyup(function(){
         var emailInput = $('#logInEmail').val();
         var filter = /^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/;
 
         if(!filter.test(emailInput)){
-
-            $('#logInEmail').css('background-color', '#F6CED8');
-       
+            $('.logToggle .emailMessage').html('Please enter valid email');
         }else {
-            $('#logInEmail').css('background-color', '#64CE7F');
+            $('.logToggle .emailMessage').html('');
         }
 
     });
 
+    //----------login submit button disabled/enabled----------
+    $('.logToggle').keyup( function(){
+        var email = $('#logInEmail').val();
+        var password = $('#logInPassword').val();
+        var passfilter = /^((?=.*(\d|[@#$%]))(?=.*[a-zA-Z]).{6,20})/;
+        var emailfilter = /^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/;
+        if(emailfilter.test(email)) {            
+            if(passfilter.test(password)) {
+                    $('.logInSubmit').prop("disabled", false);
+                } else {
+                    $('.logInSubmit').prop("disabled", true);
+                }
+        } else {
+            $('.logInSubmit').prop("disabled", true);
+        }
+        
+    });   
+
+    // //--------------Server side Login email validation-------
     $('.logInSubmit').click(function(){
 
         var validate = {
@@ -72,8 +88,6 @@
             password: $("#password").val()
         };
 
-        // console.log(validate);
-
         $.ajax({
             url: "register.php",
             type: 'POST',
@@ -100,7 +114,7 @@
         return false;
     });
 
-    // //--------------Client Side Register email validation-------
+    // //--------------Client Side Registration email validation-------
     $("#email").keyup(function(){
         var emailInput = $('#email').val();
         var filter = /^[a-zA-Z0-9-_.+]+@[a-zA-Z-_.+]+\.[a-z]{1,6}\.?[a-z]+$/;
@@ -108,11 +122,11 @@
         if(!filter.test(emailInput)){
 
             $('#email').css('background-color', '#F6CED8');
-            $('#emailMessage').html('Please enter valid email');
+            $('toggle #emailMessage').html('Please enter valid email');
        
         }else {
             $('#email').css('background-color', '#64CE7F');
-            $('#emailMessage').html('');
+            $('toggle #emailMessage').html('');
         }
 
     });

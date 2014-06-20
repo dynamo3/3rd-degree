@@ -19,13 +19,14 @@
 
                 <fieldset class="logToggle">
                    <!--  <div>Invalid email address</div> -->
-                    <label for='email' >Email Address*:</label>
+                    <label for='email'>Email Address*:</label>
                     <input type='text' name='logInEmail' id='logInEmail' maxlength="50">
-                
+                    <div id="emailMessage" class="emailMessage"></div>
+                    
                     <label for='password' >Password*:</label>
                     <input type='password' name='password' id='logInPassword' maxlength="50" >
                 
-                    <input class='logInSubmit' type='Submit' name='Submit'>
+                    <input class='logInSubmit' type='Submit' name='Submit' disabled>
 
                     <input type='hidden' name='action' value='login'>
                 </fieldset>
