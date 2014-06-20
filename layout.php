@@ -90,7 +90,7 @@
             </select>
 
             <input type="text" class="zip" id="zip" placeholder="Enter Location">
-            <input type="submit" class="go" value="GO">
+            <button type="submit" class="go">GO</button>
 
         </form>
         </div>

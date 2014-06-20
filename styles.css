@@ -188,17 +188,16 @@ button.logOut { /* div around logout button & welcm msg*/
     max-width: 650px;
     height: 450px;
     margin: 15px;
-    border: solid navy 2px;
     float: left;
     clear: left;
     border-radius: 8px;
 }
 
 table {
-    background-color: #ddd;
+    background-color: rgba(12, 1, 43, .7);
+    color: white;
     border-radius: 5px;
     display: inline-block;
-    border: solid navy 2px;
     margin-top: 15px;
     float: left;
 }
@@ -209,9 +208,11 @@ th{
 }
 
 td, tr {
-    background-color: #eee;
+/*    background-color: rgba(12, 1, 43, .7);*/
+    color: white;
+    border-bottom: 2px solid black;
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px, -2px;
     width: 40%;
     text-align: center;
     margin: 5px;
