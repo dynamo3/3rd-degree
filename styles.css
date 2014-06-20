@@ -12,6 +12,12 @@
     position: relative;
 }*/
 
+body {
+    background: url("restraunt.TIF") no-repeat top left;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-color: rgba(48, 176, 80, .5);
+}
 
 .err {
     color: red;
@@ -20,7 +26,7 @@
 
 .mainContainer {
     /*border: solid red 2px;*/
-    background-color: rgba(88, 211, 247, .8);
+    /*background-color: rgba(88, 211, 247, .8);*/
     padding: 10px;
     width: 100%;
     height: 625px;
@@ -33,7 +39,7 @@
     background-color: rgba(90,174,248, .7);
     margin: 5px;
     width: 100%;
-    min-height: 50px;
+    min-height: 75px;
     position: relative;
     /*overflow: hidden;*/
 }
@@ -59,8 +65,8 @@
 }
 
 .category {
-    border: dashed black 2px;
-    background-color: rgba(127, 90, 248, .8); /*purple*/
+    /*border: dashed black 2px;
+    background-color: rgba(127, 90, 248, .8);*/ /*purple*/
     display: inline-block;
     margin: 5px;
     float: left;
