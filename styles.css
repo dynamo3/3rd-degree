@@ -4,24 +4,16 @@
 
 }
 
-/*.buttons {
-    border: 2px solid navy;
-    display: inline;
-    float: right;
-    width: 200px;
-    position: relative;
-}*/
+@font-face {
+    font-family: avocado;
+    src: url(fonts/pehuensito.ttf);
+}
 
 body {
     background: url("images/restraunt.tif") no-repeat top left;
     background-size: 100% 100%;
     background-attachment: fixed;
     background-color: rgba(48, 176, 80, .5);
-}
-
-.err {
-    color: red;
-    font-weight: bold; 
 }
 
 .mainContainer {
@@ -44,11 +36,6 @@ body {
     /*overflow: hidden;*/
 }
 
-@font-face {
-    font-family: avocado;
-    src: url(fonts/pehuensito.ttf);
-}
-
 .logo {
     float: left;
     padding: 5px;
@@ -57,61 +44,6 @@ body {
     font-size: 32px;
     color: white;
     text-shadow: 1px 1px 1px #2D0DFF;
-}
-.select {
-    border: dashed orange 2px;
-    background-color: rgba(182, 90, 248, .7); /*magenta*/
-    margin: 5px;
-}
-
-.category {
-    /*border: dashed black 2px;
-    background-color: rgba(127, 90, 248, .8);*/ /*purple*/
-    display: inline-block;
-    margin: 5px;
-    float: left;
-}
-
-#type {
-    height: 30px;
-    width: 100px;
-    margin: 5px;
-}
-
-.zip {
-    height: 20px;
-    border-radius: 10px;
-}
-
-.user {
-    border: dashed black 2px;
-    display: inline-block;
-    float: right;
-    width: 298px;
-    height: 30px;
-    margin: 5px;
-  
-}
-
-#logIn { 
-    display:inline-block;
-    float: right;
-    margin: 5px;
-}
-
-button {
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #eee;
-    font-weight: bold;
-    font-family: verdana;
-
-}
-.logIn {
-    min-height: 30px;
-    width:65px;
-    position: absolute;
-    right: 80px;
 }
 
 .status {
@@ -124,7 +56,33 @@ button {
     position: relative;
 }
 
-.logToggle {
+/*.status { div tag w/login forms
+
+}*/
+
+button {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #eee;
+    font-weight: bold;
+    font-family: verdana;
+
+}
+
+#logIn { /* login form*/
+    display:inline-block;
+    float: right;
+    margin: 5px;
+}
+
+.logIn {  /* login button*/
+    min-height: 30px;
+    width:65px;
+    position: absolute;
+    right: 80px;
+}
+
+.logToggle { /* login fieldset*/
     width: 100px;
     min-height: 100px;
     background: #ccc;
@@ -133,8 +91,9 @@ button {
     position: relative;
     z-index: 1000;
 }
+/*no input tags are styled right now*/
 
-#register {
+#register { /* register form*/
 
     display: inline-block;
     float: right;
@@ -142,56 +101,62 @@ button {
     /*clear: right;*/
 }
 
-.register {
+
+.register { /* register button*/
     min-height: 30px;
     width:65px;
     position: absolute;
     right: 10px;
 }
 
-.logOut {
-    height: 30px;
-    width:65px;
-    position: absolute;
-    right: 80px;
-}
-
-.welcome {
-    position: absolute;
-    top: 30px;
-    right: 50px;
-    color: white;
-}
-
-.toggle {
+.toggle { /* register fieldset*/
     width: 100px;
-    height: 175px;
+    min-height: 175px;
     background: #ccc;
     margin-right: 20px;
     margin-top: 30px;
     position: relative;
     z-index: 1000;
 }
-.userName {
+
+.logOut { /* div around logout button & welcm msg*/
+    height: 30px;
+    width:65px;
+    position: absolute;
+    right: 80px;
+}
+
+.welcome { /* div around welcome msg when logged in*/
+    position: absolute;
+    top: 30px;
+    right: 50px;
     color: white;
-    border: solid black 1px;
-    padding: 2px;
-    margin: 5px;
-
 }
 
-nav {
-    display: inline-block;
-    margin: 5px;
-}
-
-.results {
+.results { /* div around options, search, go*/
     width:100%;
     border: dashed navy 1px;
     margin: 5px;
     position: absolute;
     z-index: 1;
 }
+
+.category { /* div around category and go */
+    /*border: dashed black 2px;
+    background-color: rgba(127, 90, 248, .8);*/ /*purple*/
+    display: inline-block;
+    margin: 5px;
+    float: left;
+}
+
+/* #category is select tag for categories and is not styled yet */
+
+.zip { /* input tag for zip search */
+    height: 20px;
+    border-radius: 10px;
+}
+
+/* .go is the go button not yet styled*/
 
 #map_div {
     width:100%;
@@ -223,9 +188,5 @@ td, tr {
     margin: 5px;
 }
 
-.pac-icon{
-    background-image: none;
-
-}
 
 
