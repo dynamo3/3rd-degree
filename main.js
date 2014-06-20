@@ -1,4 +1,5 @@
 ;(function($) {
+
     $('.logOut').hide();
    //-------drop down box for register and login --------
 
@@ -207,13 +208,15 @@
             zip_code: $(".zip").val()
        };
 
-
         $.ajax({
             url: "search.php",
             cache: false,
             dataType: 'json',
             type: 'POST',
             data: userParam,
+            error: function(data){
+                console.log(data + "hello data");
+            },
             success: function(data) {
                 //-------put data into table on screen-------------
                 var template = Handlebars.compile( $('#searchResults').html() );
@@ -319,6 +322,7 @@
             }
 
         });
+         return false;
 
     });
 

@@ -79,7 +79,7 @@
 
         <div class="category">
             
-        <form action="model.php" method="GET"></form>
+        <form id="search" action="" method="POST">
             <select name="category" id="category">
                 <option value="All">All</option>
                 <option value="American">American</option>
@@ -89,8 +89,9 @@
                 <option value="Thai">Thai</option>
             </select>
 
-            <input type="numeric" class="zip" id="zip" placeholder="Enter Location">
-            <button type="submit" class="go">GO</button>
+            <input type="text" class="zip" id="zip" placeholder="Enter Location">
+            <input type="submit" class="go" value="GO">
+
         </form>
         </div>
 
