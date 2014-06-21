@@ -2,6 +2,7 @@
 
     $('.logOut').hide();
     $('table').hide();
+    $('.noResults').hide();
    //-------drop down box for register and login --------
 
     $(".register").click(function(){
@@ -202,6 +203,8 @@
     
     $('.go').click(function(){
         $('tbody').html('');
+        $('.noResults').hide();
+        $('table').hide();
 
        var userParam = {
             category: $("#category").val(),
@@ -214,9 +217,6 @@
             dataType: 'json',
             type: 'POST',
             data: userParam,
-            error: function(data){
-                console.log(data + "hello data");
-            },
             success: function(data) {
                 //-------put data into table on screen-------------
                 var template = Handlebars.compile( $('#searchResults').html() );
@@ -226,7 +226,7 @@
                 var Addresses  =[];
                 
                 $('.about').hide();
-                $('table').show();
+
 
                 for (i in data.results) {
                     $('tbody').append(template(data.results[i]));
@@ -289,6 +289,13 @@
                       Icons.push(pin);
 
                 };
+
+                //---------- controlling the if no results or table of results shows-----
+                if(Icons.length>0){  
+                    $('table').show();
+                }else{
+                    $('.noResults').show();
+                }
 
                 var geocoder;
                 var map;

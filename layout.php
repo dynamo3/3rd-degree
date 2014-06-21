@@ -96,6 +96,11 @@
         </div>
 
         <div id="map_div"></div>
+
+        <div class="noResults">
+            Sorry... No results, please try again.
+        </div>
+        
         <div class="about">
             <h2>Welcome to Tasty Trend...</h2><br>
             <p>Check out which restaurants are trending in your area. <br>
