@@ -76,23 +76,21 @@
     </div>
 
     <div class="results">
+        <div class="category">  
+            <form id="search" action="" method="POST">
+                <select name="category" id="category">
+                    <option value="All">All</option>
+                    <option value="American">American</option>
+                    <option value="Greek">Greek</option>
+                    <option value="Italian">Italian</option>
+                    <option value="Mexican">Mexican</option>
+                    <option value="Thai">Thai</option>
+                </select>
 
-        <div class="category">
-            
-        <form id="search" action="" method="POST">
-            <select name="category" id="category">
-                <option value="All">All</option>
-                <option value="American">American</option>
-                <option value="Greek">Greek</option>
-                <option value="Italian">Italian</option>
-                <option value="Mexican">Mexican</option>
-                <option value="Thai">Thai</option>
-            </select>
+                <input type="text" class="zip" id="zip" placeholder="Enter Location">
+                <button type="submit" class="go">GO</button>
 
-            <input type="text" class="zip" id="zip" placeholder="Enter Location">
-            <button type="submit" class="go">GO</button>
-
-        </form>
+            </form>
         </div>
 
         <div id="map_div"></div>
@@ -100,7 +98,7 @@
         <div class="noResults">
             Sorry... No results, please try again.
         </div>
-        
+
         <div class="about">
             <h2>Welcome to Tasty Trend...</h2><br>
             <p>Check out which restaurants are trending in your area. <br>

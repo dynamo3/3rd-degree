@@ -3,11 +3,11 @@
     $('.logOut').hide();
     $('table').hide();
     $('.noResults').hide();
+
    //-------drop down box for register and login --------
 
     $(".register").click(function(){
-        $(".toggle").toggle("blind");
-        
+        $(".toggle").toggle("blind");     
     });
 
     $(".logIn").click(function(){

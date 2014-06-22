@@ -52,9 +52,10 @@ body {
     margin: 10px;
     display: inline-block;
     font-family: lobster;
-    font-size: 32px;
+    font-size: 40px;
     color: white;
     text-shadow: 3px 3px 3px #000;
+
 }
 
 .status {
@@ -198,7 +199,6 @@ table {
     background-color: rgba(12, 1, 43, .7);
     color: white;
     font-family: QuicksandBold;
-    font-size: 18px;
     border-radius: 5px;
     display: inline-block;
     width: 40%;
@@ -242,19 +242,19 @@ table {
 }
 
 th {
-    padding: 3px;
     border-radius: 5px;
     margin-bottom: 10px;
     border-bottom: 2px solid black;
     font-weight: bold;
+    padding:3px 10px 3px 10px;
+    font-size: 22px;
 }
 
 td, tr {
     color: white;
     border-bottom: 2px solid black;
     border-radius: 5px;
-    margin: 10px, -2px;
-    margin: 5px;
+    font-size: 18px;  
 }
 
 #confirmMessage, #passwordMessage, #emailMessage, .logToggle div, .toggle div {
